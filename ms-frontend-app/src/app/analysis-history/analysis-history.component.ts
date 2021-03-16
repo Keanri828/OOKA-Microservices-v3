@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ConnectionService} from '../services/connection.service';
 
 @Component({
   selector: 'app-analysis-history',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalysisHistoryComponent implements OnInit {
 
-  constructor() { }
+  // private configurationHistory: ConfigDto[];
+  constructor(private cs: ConnectionService) { }
 
   ngOnInit(): void {
   }
+
+
 
 }
