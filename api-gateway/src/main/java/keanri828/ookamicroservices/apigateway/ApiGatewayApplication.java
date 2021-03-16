@@ -2,7 +2,6 @@ package keanri828.ookamicroservices.apigateway;
 
 import com.netflix.discovery.EurekaClient;
 import keanri828.ookamicroservices.apigateway.model.ConfigDto;
-import keanri828.ookamicroservices.apigateway.model.EngineTypeEnum;
 import keanri828.ookamicroservices.apigateway.services.PersistencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
