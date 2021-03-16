@@ -54,6 +54,7 @@ public class ApiGatewayApplication {
      * @return
      */
     @PostMapping(
+            value = "/save",
             consumes = "application/json",
             produces = "application/json"
     )
