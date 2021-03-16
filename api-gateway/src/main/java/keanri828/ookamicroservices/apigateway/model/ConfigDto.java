@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
+import java.util.Date;
 import java.util.UUID;
 
 @Data
@@ -35,4 +36,7 @@ public class ConfigDto {
 
     @NotNull
     private Boolean fuelLeakageMonitor;
+
+    @Null
+    private Date timestamp;
 }

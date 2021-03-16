@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigDto } from '../interfaces/config-dto';
 import {ConnectionService} from '../services/connection.service';
 
 @Component({
@@ -8,7 +9,7 @@ import {ConnectionService} from '../services/connection.service';
 })
 export class AnalysisHistoryComponent implements OnInit {
 
-  // private configurationHistory: ConfigDto[];
+  private configurationHistory: ConfigDto[];
   constructor(private cs: ConnectionService) { }
 
   ngOnInit(): void {

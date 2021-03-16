@@ -5,6 +5,7 @@ import keanri828.ookamicroservices.apigateway.model.EngineTypeEnum;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,6 +36,7 @@ public class PersistencyServiceImpl implements PersistencyService {
                     .id(UUID.randomUUID())
                     .divValveDuplFilter(true)
                     .engineType(EngineTypeEnum.V10)
+                    .timestamp(new Date())
                     .build());
         }
         return res;
