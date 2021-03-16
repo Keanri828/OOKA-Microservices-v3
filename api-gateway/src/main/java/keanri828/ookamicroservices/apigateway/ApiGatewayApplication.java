@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.UUID;
 
 @SpringBootApplication
@@ -36,6 +37,15 @@ public class ApiGatewayApplication {
     )
     public ConfigDto getConfigById(@PathVariable UUID id){
         return persistencyService.getConfigById(id);
+    }
+
+
+    @GetMapping(
+            value = "/all",
+            produces = "application/json"
+    )
+    public List<ConfigDto> getAllConfig(){
+        return persistencyService.getAllConfig();
     }
 
     /** aktuell eigentlich nur zum Testen des Endpunkts. Die Konfiguration soll automatisch
