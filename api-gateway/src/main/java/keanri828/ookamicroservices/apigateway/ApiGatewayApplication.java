@@ -32,7 +32,7 @@ public class ApiGatewayApplication {
      * @return JSON of ConfigDto with given id
      */
     @GetMapping(
-            value = "/{id}",
+            value = "/api/{id}",
             produces = "application/json"
     )
     public ConfigDto getConfigById(@PathVariable UUID id){
@@ -41,7 +41,7 @@ public class ApiGatewayApplication {
 
 
     @GetMapping(
-            value = "/all",
+            value = "/api/all",
             produces = "application/json"
     )
     public List<ConfigDto> getAllConfig(){
@@ -54,7 +54,7 @@ public class ApiGatewayApplication {
      * @return
      */
     @PostMapping(
-            value = "/save",
+            value = "/api/save",
             consumes = "application/json",
             produces = "application/json"
     )
@@ -63,7 +63,7 @@ public class ApiGatewayApplication {
     }
 
     @DeleteMapping(
-            value = "/{id}"
+            value = "/api/{id}"
     )
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCondigById(@PathVariable UUID id) {
