@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 public class AnalyseService {
 
     public Boolean analyseConfig(ConfigDto dto){
-        try {
+        /*try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-        }
+        }*/
         return dto.getFuelLeakageMonitor() && dto.getDivValveFuelFilter();
     }
 }

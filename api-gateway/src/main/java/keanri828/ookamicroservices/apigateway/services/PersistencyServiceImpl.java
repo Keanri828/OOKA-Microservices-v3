@@ -10,10 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.ObjectInputFilter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class PersistencyServiceImpl implements PersistencyService {
@@ -65,8 +62,12 @@ public class PersistencyServiceImpl implements PersistencyService {
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<ConfigDto> httpEntity = new HttpEntity<>(dto, headers);
+        System.out.println(httpEntity.getBody().toString());
+        Boolean res;
 
-        Boolean res = restTemplate.postForObject("http://localhost:8081/analyse1/",httpEntity,Boolean.class);
+        //res = restTemplate.postForObject("http://localhost:8081/analyse1/", httpEntity, Boolean.class);
+        res = restTemplate.postForObject("http://analyse-service1/analyse1/", httpEntity, Boolean.class);
+
         dto.setSuccessful1(res);
         return dto;
     }
