@@ -1,1 +1,8 @@
-<p>analysis-history works!</p>
+<table mat-table [dataSource]="configurationHistory" class="mat-elevation-z2">
+  <ng-container [matColumnDef]="column" *ngFor="let column of configKeys">
+    <th mat-header-cell *matHeaderCellDef>{{column}}</th>
+    <td mat-cell *matCellDef="let element">{{element[column]}}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="configKeys"></tr>
+  <tr mat-row *matRowDef="let row; columns: configKeys;"></tr>
+</table>

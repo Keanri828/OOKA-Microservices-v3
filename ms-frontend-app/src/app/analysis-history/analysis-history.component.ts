@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigDto } from '../interfaces/config-dto';
 import {ConnectionService} from '../services/connection.service';
+import { MatTableModule } from '@angular/material/table';
+import {optionalPartsDictionary} from '../interfaces/optional-parts';
 
 @Component({
   selector: 'app-analysis-history',
@@ -9,12 +11,22 @@ import {ConnectionService} from '../services/connection.service';
 })
 export class AnalysisHistoryComponent implements OnInit {
 
-  private configurationHistory: ConfigDto[];
-  constructor(private cs: ConnectionService) { }
+  configurationHistory: ConfigDto[];
+  configKeys: string[] = [
+    'timestamp'
+  ];
+
+  constructor(private cs: ConnectionService) {
+    Object.keys(optionalPartsDictionary).forEach(key => {
+      this.configKeys.push(key);
+    });
+  }
 
   ngOnInit(): void {
-    this.configurationHistory = this.cs.getConfigs();
-    // console.log(this.configurationHistory);
+    this.cs.http_getAll().subscribe(configs => {
+      this.configurationHistory = configs;
+      // console.log(configs);
+    });
   }
 
 

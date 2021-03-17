@@ -14,32 +14,9 @@ export class ConnectionService {
 
   constructor(private http: HttpClient) { }
 
-  private http_getAll(): void {
-    // only for init and refresh
+  public http_getAll(): Observable<ConfigDto[]> {
     const completeUrl = this.url + '/api/all';
-    this.http.get<ConfigDto[]>(completeUrl, {responseType: 'json'}).subscribe(response => {
-      response.forEach(item => {
-        // console.log(item);
-        this.configs.push(item);
-      });
-    });
-    // console.log('(DEBUG) Received by http request:');
-    // this.log_configs();
+    return this.http.get<ConfigDto[]>(completeUrl, {responseType: 'json'});
   }
 
-  public getConfigs(): ConfigDto[] {
-    if (this.configs.length === 0) {
-      this.http_getAll();
-    }
-    return this.configs;
-  }
-
-  public refreshAndReturn(): ConfigDto[] {
-    this.configs = [];
-    return this.getConfigs();
-  }
-
-  private log_configs(): void {
-    console.log(this.configs.toString());
-  }
 }

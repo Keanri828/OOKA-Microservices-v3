@@ -8,6 +8,7 @@ import { FormComponentComponent } from './form-component/form-component.componen
 import { AnalysisHistoryComponent } from './analysis-history/analysis-history.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
         AppRoutingModule,
         BrowserAnimationsModule,
         MatToolbarModule,
-        HttpClientModule
+        HttpClientModule,
+        MatTableModule
     ],
   providers: [],
   bootstrap: [AppComponent]
