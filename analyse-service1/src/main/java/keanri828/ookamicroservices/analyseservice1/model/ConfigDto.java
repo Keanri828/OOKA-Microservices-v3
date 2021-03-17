@@ -1,4 +1,4 @@
-package keanri828.ookamicroservices.apigateway.model;
+package keanri828.ookamicroservices.analyseservice1.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
