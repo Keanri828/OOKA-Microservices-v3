@@ -41,6 +41,12 @@ public class PersistencyServiceImpl implements PersistencyService {
             res.add(ConfigDto.builder()
                     .id(UUID.randomUUID())
                     .divValveDuplFilter(true)
+                    .divValveFuelFilter(true)
+                    .oilReplSystem(false)
+                    .duplFuelFilter(false)
+                    .fuelLeakageMonitor(true)
+                    .successful1(true)
+                    .successful2(false)
                     .engineType(EngineTypeEnum.V10)
                     .timestamp(new Date())
                     .build());
