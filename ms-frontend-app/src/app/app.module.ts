@@ -9,6 +9,7 @@ import { AnalysisHistoryComponent } from './analysis-history/analysis-history.co
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,15 @@ import {MatTableModule} from '@angular/material/table';
     FormComponentComponent,
     AnalysisHistoryComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        HttpClientModule,
-        MatTableModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    HttpClientModule,
+    MatTableModule,
+    MatButtonModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

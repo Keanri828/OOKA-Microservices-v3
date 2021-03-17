@@ -3,6 +3,7 @@ import { ConfigDto } from '../interfaces/config-dto';
 import {ConnectionService} from '../services/connection.service';
 import { MatTableModule } from '@angular/material/table';
 import {optionalPartsDictionary} from '../interfaces/optional-parts';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-analysis-history',
@@ -20,6 +21,7 @@ export class AnalysisHistoryComponent implements OnInit {
     Object.keys(optionalPartsDictionary).forEach(key => {
       this.configKeys.push(key);
     });
+    this.configKeys.push('id');
   }
 
   ngOnInit(): void {
