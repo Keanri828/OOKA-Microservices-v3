@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import { ConfigDto } from '../interfaces/config-dto';
 import {ConnectionService} from '../services/connection.service';
 import { MatTableModule } from '@angular/material/table';
-import {optionalPartsDictionary} from '../interfaces/optional-parts';
+import {configDictionary} from '../interfaces/config-dict';
 import {MatButtonModule} from '@angular/material/button';
 
 @Component({
@@ -13,12 +13,10 @@ import {MatButtonModule} from '@angular/material/button';
 export class AnalysisHistoryComponent implements OnInit {
 
   configurationHistory: ConfigDto[];
-  configKeys: string[] = [
-    'timestamp'
-  ];
+  configKeys: string[] = [];
 
   constructor(private cs: ConnectionService) {
-    Object.keys(optionalPartsDictionary).forEach(key => {
+    Object.keys(configDictionary).forEach(key => {
       this.configKeys.push(key);
     });
     this.configKeys.push('id');
@@ -31,6 +29,13 @@ export class AnalysisHistoryComponent implements OnInit {
     });
   }
 
+  loadConfig(id: string): void {
+    console.log('Lade Konfiguration mit der ID ' + id);
+  }
+
+  getPropertyTranslation(key: string): string {
+    return configDictionary[key];
+  }
 
 
 }

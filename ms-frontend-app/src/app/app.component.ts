@@ -7,5 +7,5 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Wir Schiffen Das: Motor-Konfiguration';
+  title = '"Wir Schiffen Das": Engine Configuration';
 }

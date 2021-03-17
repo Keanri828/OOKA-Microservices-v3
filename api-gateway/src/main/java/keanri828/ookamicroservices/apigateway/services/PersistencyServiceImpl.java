@@ -38,6 +38,8 @@ public class PersistencyServiceImpl implements PersistencyService {
         // todo no real implementation, just a data mockup
         List<ConfigDto> res= new ArrayList<>();
         for (int i = 0; i<4;i++) {
+            Date d = new Date();
+            d.setHours(i + 2);
             res.add(ConfigDto.builder()
                     .id(UUID.randomUUID())
                     .divValveDuplFilter(true)
@@ -48,7 +50,7 @@ public class PersistencyServiceImpl implements PersistencyService {
                     .successful1(true)
                     .successful2(false)
                     .engineType(EngineTypeEnum.V10)
-                    .timestamp(new Date())
+                    .timestamp(d)
                     .build());
         }
         return res;
