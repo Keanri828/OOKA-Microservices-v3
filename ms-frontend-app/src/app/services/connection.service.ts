@@ -9,19 +9,22 @@ import {ConfigDto} from '../interfaces/config-dto';
 })
 export class ConnectionService {
 
-  private url = 'localhost:8080';
+  private url = 'http://localhost:8080';
   private configs: ConfigDto[] = [];
 
   constructor(private http: HttpClient) { }
 
   private http_getAll(): void {
     // only for init and refresh
-    const completeUrl = this.url + '/all';
+    const completeUrl = this.url + '/api/all';
     this.http.get<ConfigDto[]>(completeUrl, {responseType: 'json'}).subscribe(response => {
-      this.configs = response;
+      response.forEach(item => {
+        // console.log(item);
+        this.configs.push(item);
+      });
     });
-    console.log('(DEBUG) Received by http request:');
-    this.log_configs();
+    // console.log('(DEBUG) Received by http request:');
+    // this.log_configs();
   }
 
   public getConfigs(): ConfigDto[] {

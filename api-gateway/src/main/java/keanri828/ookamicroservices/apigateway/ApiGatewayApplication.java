@@ -40,6 +40,7 @@ public class ApiGatewayApplication {
     }
 
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(
             value = "/api/all",
             produces = "application/json"

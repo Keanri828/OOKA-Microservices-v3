@@ -14,6 +14,7 @@ export class AnalysisHistoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.configurationHistory = this.cs.getConfigs();
+    // console.log(this.configurationHistory);
   }
 
 
