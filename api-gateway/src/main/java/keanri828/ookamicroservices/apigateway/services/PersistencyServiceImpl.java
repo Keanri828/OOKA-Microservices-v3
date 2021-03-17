@@ -2,8 +2,14 @@ package keanri828.ookamicroservices.apigateway.services;
 
 import keanri828.ookamicroservices.apigateway.model.ConfigDto;
 import keanri828.ookamicroservices.apigateway.model.EngineTypeEnum;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
+import java.io.ObjectInputFilter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -40,6 +46,21 @@ public class PersistencyServiceImpl implements PersistencyService {
                     .build());
         }
         return res;
+    }
+
+    //Test analyse
+    @Autowired
+    RestTemplate restTemplate;
+    @Override
+    public ConfigDto analyse(ConfigDto dto){
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<ConfigDto> httpEntity = new HttpEntity<>(dto, headers);
+
+        Boolean res = restTemplate.postForObject("http://localhost:8081/analyse1/",httpEntity,Boolean.class);
+        dto.setSuccessful1(res);
+        return dto;
     }
 
     @Override

@@ -1,7 +1,7 @@
-GET http://localhost:8080/fcf2a83a-8669-11eb-8dcd-0242ac130003
+GET http://localhost:8080/api/fcf2a83a-8669-11eb-8dcd-0242ac130003
 
 ###
-POST http://localhost:8080/
+POST http://localhost:8080/api/save/
 Content-Type: application/json
 
 {
@@ -16,6 +16,39 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/all
+GET http://localhost:8080/api/all/
+
+###
+
+POST http://localhost:8080/api/analyse/
+Content-Type: application/json
+
+{
+  "id": "",
+  "engineType": "V10",
+  "oilReplSystem": true,
+  "divValveDuplFilter": true,
+  "duplFuelFilter": false,
+  "divValveFuelFilter": true,
+  "fuelLeakageMonitor": true
+}
+
+###
+POST http://localhost:8081/analyse1/
+Content-Type: application/json
+
+{
+  "id": "",
+  "engineType": "V10",
+  "oilReplSystem": true,
+  "divValveDuplFilter": true,
+  "duplFuelFilter": false,
+  "divValveFuelFilter": true,
+  "fuelLeakageMonitor": true
+}
+
+###
+
+GET http://localhost:8081/
 
 ###

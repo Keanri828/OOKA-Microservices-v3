@@ -10,4 +10,5 @@ public interface PersistencyService {
     public ConfigDto getConfigById(UUID id);
     public void deleteConfigById(UUID id);
     public List<ConfigDto> getAllConfig();
+    public ConfigDto analyse(ConfigDto dto);
 }

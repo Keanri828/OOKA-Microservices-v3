@@ -4,12 +4,16 @@ import com.netflix.discovery.EurekaClient;
 import keanri828.ookamicroservices.apigateway.model.ConfigDto;
 import keanri828.ookamicroservices.apigateway.services.PersistencyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -18,11 +22,13 @@ import java.util.UUID;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
+//@EnableFeignClients
 public class ApiGatewayApplication {
 
     @Autowired
     private PersistencyService persistencyService;
 
+    @Qualifier("eurekaClient")
     @Autowired
     private EurekaClient eurekaClient;
 
@@ -65,6 +71,28 @@ public class ApiGatewayApplication {
         return persistencyService.saveConfig(dto);
     }
 
+    //todo Testing of consuming rest of other ms by using eureka------
+
+    @LoadBalanced
+    @Bean
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @PostMapping(
+            value = "/api/analyse",
+            consumes = "application/json",
+            produces = "application/json"
+    )
+    public ConfigDto analyseConfig(@RequestBody @Valid ConfigDto dto){
+
+        return persistencyService.analyse(dto);
+    }
+
+
+    @GetMapping
+    //Tesing END can be removed if implemented
+
     @DeleteMapping(
             value = "/api/{id}"
     )
@@ -76,5 +104,6 @@ public class ApiGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
     }
+
 
 }
