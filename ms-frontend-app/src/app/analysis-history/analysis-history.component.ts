@@ -26,6 +26,9 @@ export class AnalysisHistoryComponent implements OnInit {
     this.cs.http_getAll().subscribe(configs => {
       this.configurationHistory = configs;
       // console.log(configs);
+      this.configurationHistory.sort((a, b) => {
+        return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+      });
     });
   }
 
