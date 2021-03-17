@@ -1,7 +1,7 @@
 export const optionalPartsDictionary = {
-  oilReplSystem: 'Oil Replenishment System',
-  divValveDuplFilter : '',
-  duplFuelFilter: '',
-  divValveFuelFilter: '',
-  fuelLeakageMonitor: ''
+  oilReplSystem: 'oil replenishment system',
+  divValveDuplFilter : 'diverter valve for duplex filter',
+  duplFuelFilter: 'duplex fuel pre-filter',
+  divValveFuelFilter: 'diverter valve for fuel filter',
+  fuelLeakageMonitor: 'fuel leakage monitoring'
 }; // for user-readable form
