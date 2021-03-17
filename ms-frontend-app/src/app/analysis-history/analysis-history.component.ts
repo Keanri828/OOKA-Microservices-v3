@@ -13,6 +13,7 @@ export class AnalysisHistoryComponent implements OnInit {
   constructor(private cs: ConnectionService) { }
 
   ngOnInit(): void {
+    this.configurationHistory = this.cs.getConfigs();
   }
 
 
