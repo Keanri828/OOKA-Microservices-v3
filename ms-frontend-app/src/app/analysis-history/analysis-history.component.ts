@@ -40,5 +40,11 @@ export class AnalysisHistoryComponent implements OnInit {
     return configDictionary[key];
   }
 
+  reformatDate(timestamp: Date): string {
+    const d = new Date(timestamp);
+    return d.getDate() + '.' + (d.getMonth() + 1)  + '.' + d.getFullYear() + ' '
+      + d.getHours() + ':' + d.getMinutes();
+  }
+
 
 }

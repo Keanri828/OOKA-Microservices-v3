@@ -7,7 +7,12 @@
       <span *ngSwitchCase="'id'">
         <button mat-raised-button color="primary" (click)="loadConfig(element.id)">Load</button>
       </span>
-      <span *ngSwitchDefault>{{element[column]}}</span>
+      <span *ngSwitchCase="'timestamp'">{{reformatDate(element['timestamp'])}}</span>
+      <span *ngSwitchCase="'engineType'">{{element[column]}}</span>
+      <span *ngSwitchDefault [ngSwitch]="element[column]">
+        <span *ngSwitchCase="true">&#10003;</span>
+        <span *ngSwitchCase="false">&#10007;</span>
+      </span>
     </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="configKeys"></tr>
