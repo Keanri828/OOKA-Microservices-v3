@@ -23,7 +23,7 @@ public class ConfigEntity {
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(updatable = false, nullable = false)
     private UUID id;
-
+    //private String test;
     private String engineType;
 
     private Boolean oilReplSystem;

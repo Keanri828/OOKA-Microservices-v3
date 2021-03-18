@@ -1,5 +1,6 @@
 package keanri828.ookamicroservices.persistencyservice.databaseconf;
 
+import com.google.common.collect.Lists;
 import keanri828.ookamicroservices.persistencyservice.entities.ConfigEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ public class ConfigService {
     ConfigRepository configRepository;
 
     public List<ConfigEntity> findAll() {
-        return configRepository.findAll();
+        return Lists.newArrayList(configRepository.findAll());
     }
 
     public long count() {
@@ -25,7 +26,7 @@ public class ConfigService {
     }
 
     public void save(ConfigEntity configEntity) {
-
         configRepository.save(configEntity);
+
     }
 }

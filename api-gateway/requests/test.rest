@@ -73,3 +73,12 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:8085/save/
+Content-Type: application/json
+
+{
+  "id": "fcf2a83a-8669-11eb-8dcd-0242ac130003",
+  "test": "Value and stuff"
+}
+
+###

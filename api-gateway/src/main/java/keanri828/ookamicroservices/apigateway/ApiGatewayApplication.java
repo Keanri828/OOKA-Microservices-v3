@@ -2,6 +2,7 @@ package keanri828.ookamicroservices.apigateway;
 
 import com.netflix.discovery.EurekaClient;
 import keanri828.ookamicroservices.apigateway.model.ConfigDto;
+import keanri828.ookamicroservices.apigateway.services.APIServiceFeign;
 import keanri828.ookamicroservices.apigateway.services.PersistencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,6 +31,9 @@ public class ApiGatewayApplication {
 
     @Autowired
     private PersistencyService persistencyService;
+
+    @Autowired
+    private APIServiceFeign apiServiceFeign;
 
     @Qualifier("eurekaClient")
     @Autowired
