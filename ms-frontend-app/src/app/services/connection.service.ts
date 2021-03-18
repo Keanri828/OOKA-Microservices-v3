@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {config, Observable, throwError} from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import {ConfigDto} from '../interfaces/config-dto';
@@ -19,4 +19,14 @@ export class ConnectionService {
     return this.http.get<ConfigDto[]>(completeUrl, {responseType: 'json'});
   }
 
+  http_submit(dto: ConfigDto): Observable<ConfigDto> {
+    const completeUrl = this.url + '/api/analyse';
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    const options = { headers: headers};
+    // @ts-ignore
+    return this.http.post(completeUrl, dto, options);
+  }
 }

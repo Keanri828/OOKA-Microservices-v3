@@ -26,7 +26,7 @@ export class FormComponentComponent implements OnInit {
   };
   optionalComponentsKeys = Object.keys(this.optionalComponents);
 
-  dataToSubmit = {};
+  results = {};
 
   constructor(private cs: ConnectionService) { }
 
@@ -37,8 +37,9 @@ export class FormComponentComponent implements OnInit {
     return configDictionary[key];
   }
 
-  analyze(): void {
-    Object.keys(configDictionary).forEach(key => {
+  analyse(): void {
+    // generate dto
+    /*Object.keys(configDictionary).forEach(key => {
       if (this.optionalComponentsKeys.includes(key)) {
         this.dataToSubmit[key] = this.optionalComponents[key];
       } else if (key === 'engineType') {
@@ -46,6 +47,26 @@ export class FormComponentComponent implements OnInit {
       } else {
         this.dataToSubmit[key] = null;
       }
+    });*/
+
+    let dto: ConfigDto;
+    dto = new ConfigDto(
+      null,
+      null,
+      this.selectedEngine,
+      this.optionalComponents.oilReplSystem,
+      this.optionalComponents.divValveDuplFilter,
+      this.optionalComponents.duplFuelFilter,
+      this.optionalComponents.divValveFuelFilter,
+      this.optionalComponents.fuelLeakageMonitor,
+      null,
+      null
+    );
+
+    // todo idealerweise WebSocket, um den Status verfolgen zu können
+    this.cs.http_submit(dto).subscribe(response => {
+      this.results['Analysis1'] = response.successful1;
+      this.results['Analysis2'] = response.successful2;
     });
   }
 }

@@ -63,6 +63,7 @@ public class ApiGatewayApplication {
      * @param dto
      * @return
      */
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(
             value = "/api/save",
             consumes = "application/json",
