@@ -19,7 +19,6 @@ export class AnalysisHistoryComponent implements OnInit {
     Object.keys(configDictionary).forEach(key => {
       this.configKeys.push(key);
     });
-    this.configKeys.push('id');
   }
 
   ngOnInit(): void {

@@ -7,5 +7,6 @@ export const configDictionary = {
   divValveDuplFilter : 'diverter valve for duplex filter',
   duplFuelFilter: 'duplex fuel pre-filter',
   divValveFuelFilter: 'diverter valve for fuel filter',
-  fuelLeakageMonitor: 'fuel leakage monitoring'
+  fuelLeakageMonitor: 'fuel leakage monitoring',
+  id: 'ID'
 }; // for user-readable form
