@@ -1,0 +1,65 @@
+version: '2'
+services:
+  service-registry:
+    container_name: service-registry
+    build:
+      context: service-registry
+      dockerfile: Dockerfile
+    image: ooka-service-registry:latest
+    ports:
+      - 18761:8761
+    networks:
+      - spring-cloud-network
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: api-gateway
+      dockerfile: Dockerfile
+    image: ooka-api-gateway
+    ports:
+      - 18080:8080
+    networks:
+      - spring-cloud-network
+  manufacturing-service:
+    container_name: manufacturing-service
+    build:
+      context: manufacturing-service
+      dockerfile: Dockerfile
+    image: ooka-manufacturing-service:latest
+    ports:
+      - 18084:8084
+    networks:
+      - spring-cloud-network
+  analyse-service1:
+    container_name: analyse-service1
+    build:
+      context: analyse-service1
+      dockerfile: Dockerfile
+    image: ooka-analyse-service1:latest
+    ports:
+      - 18081:8081
+    networks:
+      - spring-cloud-network
+  analyse-service2:
+    container_name: analyse-service2
+    build:
+      context: analyse-service2
+      dockerfile: Dockerfile
+    image: ooka-analyse-service2:latest
+    ports:
+      - 18082:8082
+    networks:
+      - spring-cloud-network
+  persistency-service:
+    container_name: persistency-service
+    build:
+      context: persistency-service
+      dockerfile: Dockerfile
+    image: ooka-persistency-service:latest
+    ports:
+      - 18085:8085
+    networks:
+      - spring-cloud-network
+networks:
+  spring-cloud-network:
+    driver: bridge
