@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@FeignClient("manufacturing-service")
+
 public class ManufacturingServiceApplication {
 
     public static void main(String[] args) {

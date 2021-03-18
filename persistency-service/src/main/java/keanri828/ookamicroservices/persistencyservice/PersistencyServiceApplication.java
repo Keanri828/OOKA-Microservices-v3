@@ -19,7 +19,7 @@ import javax.validation.Valid;
 @EnableEurekaClient
 @EnableFeignClients
 @RestController
-//@FeignClient("persistency-service")
+
 public class PersistencyServiceApplication {
 
     public static void main(String[] args) {
