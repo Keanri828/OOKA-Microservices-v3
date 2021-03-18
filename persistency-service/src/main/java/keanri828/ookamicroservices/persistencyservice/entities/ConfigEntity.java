@@ -24,9 +24,7 @@ public class ConfigEntity {
     @Column(updatable = false, nullable = false)
     private UUID id;
 
-    @CreationTimestamp
-    @Column(updatable = false)
-    private Date timestamp; // for sorting in history
+    private String engineType;
 
     private Boolean oilReplSystem;
 
@@ -37,4 +35,10 @@ public class ConfigEntity {
     private Boolean divValveFuelFilter;
 
     private Boolean fuelLeakageMonitor;
+
+    private Date timestamp; // for sorting in history
+
+    private Boolean successful1;
+
+    private Boolean successful2;
 }

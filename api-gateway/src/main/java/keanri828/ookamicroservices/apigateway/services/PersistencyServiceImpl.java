@@ -62,7 +62,7 @@ public class PersistencyServiceImpl implements PersistencyService {
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<ConfigDto> httpEntity = new HttpEntity<>(dto, headers);
-        System.out.println(httpEntity.getBody().toString());
+        //System.out.println(httpEntity.getBody().toString());
         Boolean res;
 
         //res = restTemplate.postForObject("http://localhost:8081/analyse1/", httpEntity, Boolean.class);

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.UUID;
-//@EnableFeignClients
+@EnableFeignClients
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
@@ -45,7 +45,7 @@ public class AnalyseService1Application {
     }
 
     @GetMapping(
-            value = "/",
+            value = "/test",
             produces = "application/json"
     )
     public String testString(){return "Test Erfolgreich MService UP";}
