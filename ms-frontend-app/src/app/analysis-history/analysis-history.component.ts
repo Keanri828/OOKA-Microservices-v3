@@ -34,6 +34,7 @@ export class AnalysisHistoryComponent implements OnInit {
 
   loadConfig(id: string): void {
     console.log('Lade Konfiguration mit der ID ' + id);
+    // todo
   }
 
   getPropertyTranslation(key: string): string {

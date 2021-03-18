@@ -1,1 +1,19 @@
-<p>form-component works!</p>
+<div id="outerDiv">
+  <mat-form-field>
+    <mat-label>engine type</mat-label>
+    <mat-select [(ngModel)]="selectedEngine">
+      <mat-option *ngFor="let engine of engineTypes" [value]="engine">
+        {{engine}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div *ngFor="let key of optionalComponentsKeys">
+    <mat-label>{{getPropertyTranslation(key)}}</mat-label>
+    <mat-radio-group class="optional-radio-group" [(ngModel)]="optionalComponents[key]">
+      <mat-radio-button class="optional-radio-button" [value]="true">yes</mat-radio-button>
+      <mat-radio-button class="optional-radio-button" [value]="false">no</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <button mat-raised-button color="primary" (click)="analyze()">Analyze</button>
+</div>
+

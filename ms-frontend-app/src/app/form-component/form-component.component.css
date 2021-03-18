@@ -1,0 +1,13 @@
+#outerDiv {
+  padding: 5%
+}
+
+.optional-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.optional-radio-button {
+  margin: 5px;
+}
