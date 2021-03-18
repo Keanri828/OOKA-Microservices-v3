@@ -26,6 +26,7 @@ export class ConnectionService {
       'Content-Type': 'application/json'
     });
     const options = { headers: headers};
+    console.log(dto);
     // @ts-ignore
     return this.http.post(completeUrl, dto, options);
   }
