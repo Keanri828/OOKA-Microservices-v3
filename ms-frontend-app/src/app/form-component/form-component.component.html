@@ -15,5 +15,8 @@
     </mat-radio-group>
   </div>
   <button mat-raised-button color="primary" (click)="analyse()" [disabled]="selectedEngine.length == 0">Analyze</button>
+  <div>
+    {{results | json}}
+  </div>
 </div>
 

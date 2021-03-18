@@ -49,6 +49,7 @@ export class FormComponentComponent implements OnInit {
       }
     });*/
 
+    this.results = {}; // reset
     let dto: ConfigDto;
     dto = new ConfigDto(
       null,
