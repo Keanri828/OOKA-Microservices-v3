@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class ConfigService {
+public class ConfigPersistencyService {
 
     @Autowired
     ConfigRepository configRepository;
@@ -27,8 +27,8 @@ public class ConfigService {
         configRepository.delete(configEntity);
     }
 
-    public void save(ConfigEntity configEntity) {
-        configRepository.save(configEntity);
+    public UUID save(ConfigEntity configEntity) {
+        return configRepository.save(configEntity).getId();
     }
     public void deleteById(UUID id) {
         configRepository.deleteById(id);
