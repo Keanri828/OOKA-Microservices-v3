@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@FeignClient("analyse-service2")
+//@FeignClient("analyse-service2")
 public class AnalyseService2Application {
 
     public static void main(String[] args) {
