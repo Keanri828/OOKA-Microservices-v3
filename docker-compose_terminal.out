@@ -1,0 +1,1038 @@
+docker-compose up --build
+Creating network "microserviceprojekt_spring-cloud-network" with driver "bridge"
+Building service-registry
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 1.8s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 32B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for docker.io/library/adoptopenjdk:11-jre-ho  1.7s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 92B                                           0.0s
+ => [1/2] FROM docker.io/library/adoptopenjdk:11-jre-hotspot@sha256:c78eb  0.0s
+ => CACHED [2/2] COPY target/service-registry-0.0.1-SNAPSHOT.jar service-  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:0552da387a9a7d2c86091fec3ddc5da457d29131d3c8a  0.0s
+ => => naming to docker.io/library/ooka-service-registry:latest            0.0s
+Successfully built 0552da387a9a7d2c86091fec3ddc5da457d29131d3c8a62ffc426a96238fe1d3
+Building api-gateway
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 0.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 32B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for docker.io/library/adoptopenjdk:11-jre-ho  0.3s
+ => [1/2] FROM docker.io/library/adoptopenjdk:11-jre-hotspot@sha256:c78eb  0.0s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 87B                                           0.0s
+ => CACHED [2/2] COPY target/api-gateway-0.0.1-SNAPSHOT.jar api-gateway-0  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:00c2dddad4f155ae4eca5a208f587ed6d28fccc742ac7  0.0s
+ => => naming to docker.io/library/ooka-api-gateway                        0.0s
+Successfully built 00c2dddad4f155ae4eca5a208f587ed6d28fccc742ac761d4b96f3bdb8a2dc86
+Building manufacturing-service
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 0.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 32B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for docker.io/library/adoptopenjdk:11-jre-ho  0.3s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 97B                                           0.0s
+ => [1/2] FROM docker.io/library/adoptopenjdk:11-jre-hotspot@sha256:c78eb  0.0s
+ => CACHED [2/2] COPY target/manufacturing-service-0.0.1-SNAPSHOT.jar man  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:5f60a7cd9f30150f90ca7e5b4bfca1095b155ffbd5c6d  0.0s
+ => => naming to docker.io/library/ooka-manufacturing-service:latest       0.0s
+Successfully built 5f60a7cd9f30150f90ca7e5b4bfca1095b155ffbd5c6dfa810afe6887b441ae3
+Building analyse-service1
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 0.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 32B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for docker.io/library/adoptopenjdk:11-jre-ho  0.3s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 92B                                           0.0s
+ => [1/2] FROM docker.io/library/adoptopenjdk:11-jre-hotspot@sha256:c78eb  0.0s
+ => CACHED [2/2] COPY target/analyse-service1-0.0.1-SNAPSHOT.jar analyse-  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:ae8049a251991c58cf5f2261ed99470d2ebe083ec7520  0.0s
+ => => naming to docker.io/library/ooka-analyse-service1:latest            0.0s
+Successfully built ae8049a251991c58cf5f2261ed99470d2ebe083ec75200636e619b957e3af9d5
+Building analyse-service2
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 0.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 32B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for docker.io/library/adoptopenjdk:11-jre-ho  0.3s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 92B                                           0.0s
+ => [1/2] FROM docker.io/library/adoptopenjdk:11-jre-hotspot@sha256:c78eb  0.0s
+ => CACHED [2/2] COPY target/analyse-service2-0.0.1-SNAPSHOT.jar analyse-  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:02b00aee55a07f5eb3cac19eca2c3c407bb9d1d0f1747  0.0s
+ => => naming to docker.io/library/ooka-analyse-service2:latest            0.0s
+Successfully built 02b00aee55a07f5eb3cac19eca2c3c407bb9d1d0f17473cfd14a801fbb97eaba
+Building persistency-service
+failed to get console mode for stdout: The handle is invalid.
+[+] Building 0.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 32B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for docker.io/library/adoptopenjdk:11-jre-ho  0.3s
+ => [internal] load build context                                          0.0s
+ => => transferring context: 95B                                           0.0s
+ => [1/2] FROM docker.io/library/adoptopenjdk:11-jre-hotspot@sha256:c78eb  0.0s
+ => CACHED [2/2] COPY target/persistency-service-0.0.1-SNAPSHOT.jar persi  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:b539c759890c35d07ba864bf169a5cbd758c8b09f92f8  0.0s
+ => => naming to docker.io/library/ooka-persistency-service:latest         0.0s
+Successfully built b539c759890c35d07ba864bf169a5cbd758c8b09f92f821536168397e2f679ea
+Creating service-registry ... done
+Creating api-gateway           ... done
+Creating analyse-service1      ... done
+Creating persistency-service   ... done
+Creating analyse-service2      ... done
+Creating manufacturing-service ... done
+Attaching to service-registry, analyse-service2, manufacturing-service, persistency-service, api-gateway, analyse-service1
+service-registry         |
+service-registry         |   .   ____          _            __ _ _
+service-registry         |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+service-registry         | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+service-registry         |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+service-registry         |   '  |____| .__|_| |_|_| |_\__, | / / / /
+service-registry         |  =========|_|==============|___/=/_/_/_/
+service-registry         |  :: Spring Boot ::                (v2.4.3)
+service-registry         |
+service-registry         | 2021-03-18 23:20:06.446  INFO 1 --- [           main] k.o.s.ServiceRegistryApplication         : Starting ServiceRegistryApplication v0.0.1-SNAPSHOT using Java 11.0.10 on 6c187c9f1195 with PID 1 (/service-
+registry-0.0.1-SNAPSHOT.jar started by root in /)
+service-registry         | 2021-03-18 23:20:06.449  INFO 1 --- [           main] k.o.s.ServiceRegistryApplication         : No active profile set, falling back to default profiles: default
+manufacturing-service    |
+manufacturing-service    |   .   ____          _            __ _ _
+manufacturing-service    |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+manufacturing-service    | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+manufacturing-service    |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+manufacturing-service    |   '  |____| .__|_| |_|_| |_\__, | / / / /
+manufacturing-service    |  =========|_|==============|___/=/_/_/_/
+manufacturing-service    |  :: Spring Boot ::                (v2.4.3)
+manufacturing-service    |
+persistency-service      |
+persistency-service      |   .   ____          _            __ _ _
+persistency-service      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+persistency-service      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+persistency-service      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+persistency-service      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+persistency-service      |  =========|_|==============|___/=/_/_/_/
+persistency-service      |  :: Spring Boot ::                (v2.4.3)
+persistency-service      |
+analyse-service2         |
+analyse-service2         |   .   ____          _            __ _ _
+analyse-service2         |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+analyse-service2         | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+analyse-service2         |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+analyse-service2         |   '  |____| .__|_| |_|_| |_\__, | / / / /
+analyse-service2         |  =========|_|==============|___/=/_/_/_/
+analyse-service2         |  :: Spring Boot ::                (v2.4.3)
+analyse-service2         |
+manufacturing-service    | 2021-03-18 23:20:09.202  INFO 1 --- [           main] k.o.m.ManufacturingServiceApplication    : Starting ManufacturingServiceApplication v0.0.1-SNAPSHOT using Java 11.0.10 on e98d04316892 with PID 1 (/man
+ufacturing-service-0.0.1-SNAPSHOT.jar started by root in /)
+manufacturing-service    | 2021-03-18 23:20:09.205  INFO 1 --- [           main] k.o.m.ManufacturingServiceApplication    : No active profile set, falling back to default profiles: default
+persistency-service      | 2021-03-18 23:20:09.211  INFO 1 --- [           main] k.o.p.PersistencyServiceApplication      : Starting PersistencyServiceApplication v0.0.1-SNAPSHOT using Java 11.0.10 on eece80782cfd with PID 1 (/persi
+stency-service-0.0.1-SNAPSHOT.jar started by root in /)
+persistency-service      | 2021-03-18 23:20:09.226  INFO 1 --- [           main] k.o.p.PersistencyServiceApplication      : No active profile set, falling back to default profiles: default
+analyse-service2         | 2021-03-18 23:20:09.327  INFO 1 --- [           main] k.o.a.AnalyseService2Application         : Starting AnalyseService2Application v0.0.1-SNAPSHOT using Java 11.0.10 on 2671712e4f86 with PID 1 (/analyse-
+service2-0.0.1-SNAPSHOT.jar started by root in /)
+analyse-service2         | 2021-03-18 23:20:09.361  INFO 1 --- [           main] k.o.a.AnalyseService2Application         : No active profile set, falling back to default profiles: default
+api-gateway              |
+api-gateway              |   .   ____          _            __ _ _
+api-gateway              |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api-gateway              | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api-gateway              |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api-gateway              |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api-gateway              |  =========|_|==============|___/=/_/_/_/
+api-gateway              |  :: Spring Boot ::                (v2.4.3)
+api-gateway              |
+api-gateway              | 2021-03-18 23:20:09.740  INFO 1 --- [           main] k.o.apigateway.ApiGatewayApplication     : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 11.0.10 on c29dd1c27406 with PID 1 (/api-gateway-0
+.0.1-SNAPSHOT.jar started by root in /)
+api-gateway              | 2021-03-18 23:20:09.743  INFO 1 --- [           main] k.o.apigateway.ApiGatewayApplication     : No active profile set, falling back to default profiles: default
+service-registry         | 2021-03-18 23:20:10.014  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=126df2cb-51b3-30cc-a085-4aed92231997
+analyse-service1         |
+analyse-service1         |   .   ____          _            __ _ _
+analyse-service1         |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+analyse-service1         | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+analyse-service1         |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+analyse-service1         |   '  |____| .__|_| |_|_| |_\__, | / / / /
+analyse-service1         |  =========|_|==============|___/=/_/_/_/
+analyse-service1         |  :: Spring Boot ::                (v2.4.3)
+analyse-service1         |
+service-registry         | 2021-03-18 23:20:11.141  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+service-registry         | 2021-03-18 23:20:11.156  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+service-registry         | 2021-03-18 23:20:11.157  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+service-registry         | 2021-03-18 23:20:11.286  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+service-registry         | 2021-03-18 23:20:11.286  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4643 ms
+analyse-service1         | 2021-03-18 23:20:11.469  INFO 1 --- [           main] k.o.a.AnalyseService1Application         : Starting AnalyseService1Application v0.0.1-SNAPSHOT using Java 11.0.10 on 73e37d517038 with PID 1 (/analyse-
+service1-0.0.1-SNAPSHOT.jar started by root in /)
+analyse-service1         | 2021-03-18 23:20:11.472  INFO 1 --- [           main] k.o.a.AnalyseService1Application         : No active profile set, falling back to default profiles: default
+persistency-service      | 2021-03-18 23:20:11.744  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+persistency-service      | 2021-03-18 23:20:12.058  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 297 ms. Found 1 JPA repository interfaces.
+analyse-service2         | 2021-03-18 23:20:12.152  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=76b78581-6f8f-3f38-91b2-40377b8b392d
+service-registry         | 2021-03-18 23:20:12.496  INFO 1 --- [           main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+service-registry         | 2021-03-18 23:20:12.812  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+service-registry         | 2021-03-18 23:20:12.813  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+manufacturing-service    | 2021-03-18 23:20:12.952  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8ef2b317-6036-3a9a-9e0b-dfa2e5910cdb
+persistency-service      | 2021-03-18 23:20:13.114  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b472c02f-dbc9-3034-8190-6f820a811e1f
+analyse-service2         | 2021-03-18 23:20:13.331  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+api-gateway              | 2021-03-18 23:20:13.331  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=db432c4e-1671-3cc6-a166-a050de25a409
+service-registry         | 2021-03-18 23:20:13.384  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+service-registry         | 2021-03-18 23:20:13.384  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+analyse-service2         | 2021-03-18 23:20:13.457  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+analyse-service2         | 2021-03-18 23:20:13.508  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+analyse-service2         | 2021-03-18 23:20:13.702  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+analyse-service2         | 2021-03-18 23:20:13.702  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4187 ms
+manufacturing-service    | 2021-03-18 23:20:14.293  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+manufacturing-service    | 2021-03-18 23:20:14.313  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+manufacturing-service    | 2021-03-18 23:20:14.313  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+manufacturing-service    | 2021-03-18 23:20:14.410  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+manufacturing-service    | 2021-03-18 23:20:14.424  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4872 ms
+persistency-service      | 2021-03-18 23:20:14.556  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+persistency-service      | 2021-03-18 23:20:14.597  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+persistency-service      | 2021-03-18 23:20:14.599  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+api-gateway              | 2021-03-18 23:20:14.652  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+persistency-service      | 2021-03-18 23:20:14.678  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+persistency-service      | 2021-03-18 23:20:14.679  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5064 ms
+api-gateway              | 2021-03-18 23:20:14.685  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+api-gateway              | 2021-03-18 23:20:14.686  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+persistency-service      | 2021-03-18 23:20:14.774  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+api-gateway              | 2021-03-18 23:20:14.781  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+api-gateway              | 2021-03-18 23:20:14.782  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4714 ms
+analyse-service2         | 2021-03-18 23:20:14.793  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+analyse-service1         | 2021-03-18 23:20:15.154  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2c1bb8b2-2130-3bcc-856d-bbce2e6aed17
+persistency-service      | 2021-03-18 23:20:15.362  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+persistency-service      | 2021-03-18 23:20:15.388  INFO 1 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:C:/data/sample'
+manufacturing-service    | 2021-03-18 23:20:15.390  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+analyse-service2         | 2021-03-18 23:20:15.687  INFO 1 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+persistency-service      | 2021-03-18 23:20:16.007  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+persistency-service      |      name: default
+persistency-service      |      ...]
+service-registry         | 2021-03-18 23:20:16.016  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+analyse-service2         | 2021-03-18 23:20:16.051  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cach
+e, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+analyse-service2         | 2021-03-18 23:20:16.145  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+persistency-service      | 2021-03-18 23:20:16.274  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+persistency-service      | 2021-03-18 23:20:16.277  INFO 1 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+analyse-service1         | 2021-03-18 23:20:16.304  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+analyse-service1         | 2021-03-18 23:20:16.330  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+analyse-service1         | 2021-03-18 23:20:16.330  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+analyse-service2         | 2021-03-18 23:20:16.505  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+analyse-service2         | 2021-03-18 23:20:16.513  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+analyse-service1         | 2021-03-18 23:20:16.513  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+analyse-service1         | 2021-03-18 23:20:16.514  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4845 ms
+manufacturing-service    | 2021-03-18 23:20:16.557  INFO 1 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+analyse-service2         | 2021-03-18 23:20:16.602  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+analyse-service2         | 2021-03-18 23:20:16.603  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+analyse-service2         | 2021-03-18 23:20:16.603  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+analyse-service2         | 2021-03-18 23:20:16.603  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+analyse-service2         | 2021-03-18 23:20:16.603  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+analyse-service2         | 2021-03-18 23:20:16.605  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+analyse-service2         | 2021-03-18 23:20:16.605  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+persistency-service      | 2021-03-18 23:20:16.735  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.
+factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; n
+ested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+persistency-service      | 2021-03-18 23:20:16.735  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+persistency-service      | 2021-03-18 23:20:16.743  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+persistency-service      | 2021-03-18 23:20:16.746  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+persistency-service      | 2021-03-18 23:20:16.795  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener :
+persistency-service      |
+persistency-service      | Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+persistency-service      | 2021-03-18 23:20:16.864 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+persistency-service      |
+persistency-service      | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConf
+iguration.class]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+persistency-service      |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1153) ~[spring-context-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907) ~[spring-context-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582) ~[spring-context-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.3.jar!/:2.4.3]
+persistency-service      |      at keanri828.ookamicroservices.persistencyservice.PersistencyServiceApplication.main(PersistencyServiceApplication.java:27) ~[classes!/:0.0.1-SNAPSHOT]
+persistency-service      |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+persistency-service      |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+persistency-service      |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+persistency-service      |      at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+persistency-service      |      at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[persistency-service-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+persistency-service      |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:107) ~[persistency-service-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+persistency-service      |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[persistency-service-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+persistency-service      |      at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[persistency-service-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+persistency-service      | Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+persistency-service      |      at org.hibernate.boot.spi.XmlMappingBinderAccess.<init>(XmlMappingBinderAccess.java:43) ~[hibernate-core-5.3.7.Final.jar!/:5.3.7.Final]
+persistency-service      |      at org.hibernate.boot.MetadataSources.<init>(MetadataSources.java:86) ~[hibernate-core-5.3.7.Final.jar!/:5.3.7.Final]
+persistency-service      |      at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:212) ~[hibernate-core-5.3.7.Final.jar!/:5.3.7.Final]
+persistency-service      |      at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.<init>(EntityManagerFactoryBuilderImpl.java:167) ~[hibernate-core-5.3.7.Final.jar!/:5.3.7.Final]
+persistency-service      |      at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:52) ~[spring-orm-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.4.jar!/:5.3.4]
+persistency-service      |      ... 25 common frames omitted
+persistency-service      | Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+persistency-service      |      at java.base/java.net.URLClassLoader.findClass(Unknown Source) ~[na:na]
+persistency-service      |      at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+persistency-service      |      at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:151) ~[persistency-service-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+persistency-service      |      at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+persistency-service      |      ... 36 common frames omitted
+persistency-service      |
+api-gateway              | 2021-03-18 23:20:16.879  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+analyse-service2         | 2021-03-18 23:20:17.085  INFO 1 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://service-registry:8761/eureka/}, except
+ion=I/O error on GET request for "http://service-registry:8761/eureka/apps/": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) stacktrace=org.springframe
+work.web.client.ResourceAccessException: I/O error on GET request for "http://service-registry:8761/eureka/apps/": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connectio
+n refused)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:66)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:290)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+analyse-service2         |      at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+analyse-service2         |      at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+analyse-service2         |      at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:374)
+analyse-service2         |      at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:381)
+analyse-service2         |      at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:184)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:371)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+analyse-service2         |      at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:127)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:115)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+analyse-service2         |      at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+analyse-service2         |      at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:490)
+analyse-service2         |      at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+analyse-service2         |      at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+analyse-service2         |      at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$c716edd0.getEurekaClient(<generated>)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:54)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+analyse-service2         |      at java.base/java.lang.Iterable.forEach(Unknown Source)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+analyse-service2         |      at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:934)
+analyse-service2         |      at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585)
+analyse-service2         |      at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+analyse-service2         |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+analyse-service2         |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+analyse-service2         |      at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+analyse-service2         |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+analyse-service2         |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+analyse-service2         |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+analyse-service2         |      at keanri828.ookamicroservices.analyseservice2.AnalyseService2Application.main(AnalyseService2Application.java:16)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+analyse-service2         |      at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+analyse-service2         |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:107)
+analyse-service2         |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+analyse-service2         |      at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+analyse-service2         | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+analyse-service2         |      at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+analyse-service2         |      at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+analyse-service2         |      at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+analyse-service2         |      at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+analyse-service2         |      at java.base/java.net.Socket.connect(Unknown Source)
+analyse-service2         |      at java.base/java.net.Socket.connect(Unknown Source)
+analyse-service2         |      at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+analyse-service2         |      at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+analyse-service2         |      at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+analyse-service2         |      at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+analyse-service2         |      ... 77 more
+analyse-service2         |
+analyse-service2         | 2021-03-18 23:20:17.085  WARN 1 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://service-registry:8761/eureka/app
+s/": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+analyse-service2         | 2021-03-18 23:20:17.086  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082 - was unable to refresh its cache! This
+periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:66)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:290)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+analyse-service2         |      at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+analyse-service2         |      at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+analyse-service2         |      at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:374)
+analyse-service2         |      at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:381)
+analyse-service2         |      at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:184)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:371)
+analyse-service2         |      at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+analyse-service2         |      at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:127)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:115)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+analyse-service2         |      at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+analyse-service2         |      at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:490)
+analyse-service2         |      at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+analyse-service2         |      at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+analyse-service2         |      at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$c716edd0.getEurekaClient(<generated>)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:54)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+analyse-service2         |      at java.base/java.lang.Iterable.forEach(Unknown Source)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+analyse-service2         |      at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+analyse-service2         |      at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:934)
+analyse-service2         |      at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585)
+analyse-service2         |      at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+analyse-service2         |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+analyse-service2         |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+analyse-service2         |      at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+analyse-service2         |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+analyse-service2         |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+analyse-service2         |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+analyse-service2         |      at keanri828.ookamicroservices.analyseservice2.AnalyseService2Application.main(AnalyseService2Application.java:16)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+analyse-service2         |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+analyse-service2         |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+analyse-service2         |      at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+analyse-service2         |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:107)
+analyse-service2         |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+analyse-service2         |      at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+analyse-service2         |
+analyse-service2         | 2021-03-18 23:20:17.086  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+analyse-service2         | 2021-03-18 23:20:17.087  WARN 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+analyse-service2         | 2021-03-18 23:20:17.087  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+analyse-service2         | 2021-03-18 23:20:17.092  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+manufacturing-service    | 2021-03-18 23:20:17.091  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cach
+e, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+analyse-service2         | 2021-03-18 23:20:17.107  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+analyse-service2         | 2021-03-18 23:20:17.144  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1616109617143 with initial instances count: 0
+analyse-service2         | 2021-03-18 23:20:17.146  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ANALYSE-SERVICE2 with eureka with status UP
+analyse-service2         | 2021-03-18 23:20:17.170  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1616109617170, current=UP, previous=STARTING]
+manufacturing-service    | 2021-03-18 23:20:17.312  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+analyse-service2         | 2021-03-18 23:20:17.240  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082: registering service...
+service-registry         | 2021-03-18 23:20:17.367  INFO 1 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+analyse-service2         | 2021-03-18 23:20:17.455  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+analyse-service2         | 2021-03-18 23:20:17.456  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+analyse-service2         | 2021-03-18 23:20:17.585  INFO 1 --- [           main] k.o.a.AnalyseService2Application         : Started AnalyseService2Application in 10.548 seconds (JVM running for 12.103)
+analyse-service2         | 2021-03-18 23:20:17.619  INFO 1 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://service-registry:8761/eureka/}, except
+ion=I/O error on POST request for "http://service-registry:8761/eureka/apps/ANALYSE-SERVICE2": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) stacktrac
+e=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://service-registry:8761/eureka/apps/ANALYSE-SERVICE2": Connection refused (Connection refused); nested exception is java.net.ConnectExcept
+ion: Connection refused (Connection refused)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+analyse-service2         |      at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+analyse-service2         |      at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+analyse-service2         |      at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+analyse-service2         |      at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+analyse-service2         |      at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+analyse-service2         |      at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+analyse-service2         |      at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+analyse-service2         |      at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+analyse-service2         |      at java.base/java.lang.Thread.run(Unknown Source)
+analyse-service2         | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+analyse-service2         |      at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+analyse-service2         |      at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+analyse-service2         |      at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+analyse-service2         |      at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+analyse-service2         |      at java.base/java.net.Socket.connect(Unknown Source)
+analyse-service2         |      at java.base/java.net.Socket.connect(Unknown Source)
+analyse-service2         |      at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+analyse-service2         |      at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+analyse-service2         |      at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+analyse-service2         |      at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+analyse-service2         |      at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+analyse-service2         |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+analyse-service2         |      ... 22 more
+analyse-service2         |
+analyse-service2         | 2021-03-18 23:20:17.621  WARN 1 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://service-registry:8761/eureka/ap
+ps/ANALYSE-SERVICE2": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+service-registry         | 2021-03-18 23:20:17.620  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cach
+e, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+analyse-service2         | 2021-03-18 23:20:17.630  WARN 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082 - registration failed Cannot execute req
+uest on any known server
+analyse-service2         |
+analyse-service2         | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+analyse-service2         |
+analyse-service2         | 2021-03-18 23:20:17.634  WARN 1 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+analyse-service2         |
+analyse-service2         | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.11.jar!/:1.10.11]
+analyse-service2         |      at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+analyse-service2         |      at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+analyse-service2         |
+manufacturing-service    | 2021-03-18 23:20:17.677  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+manufacturing-service    | 2021-03-18 23:20:17.711  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+service-registry         | 2021-03-18 23:20:17.720  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+manufacturing-service    | 2021-03-18 23:20:17.773  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+manufacturing-service    | 2021-03-18 23:20:17.773  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+manufacturing-service    | 2021-03-18 23:20:17.774  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+manufacturing-service    | 2021-03-18 23:20:17.774  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+manufacturing-service    | 2021-03-18 23:20:17.774  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+manufacturing-service    | 2021-03-18 23:20:17.774  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+manufacturing-service    | 2021-03-18 23:20:17.774  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+persistency-service exited with code 1
+service-registry         | 2021-03-18 23:20:17.806  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+service-registry         | 2021-03-18 23:20:17.807  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+service-registry         | 2021-03-18 23:20:17.825  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1616109617824 with initial instances count: 0
+service-registry         | 2021-03-18 23:20:17.980  INFO 1 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+api-gateway              | 2021-03-18 23:20:17.986  INFO 1 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+service-registry         | 2021-03-18 23:20:17.997  INFO 1 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://service-registry:8761/eureka/]
+manufacturing-service    | 2021-03-18 23:20:18.081  INFO 1 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://service-registry:8761/eureka/}, except
+ion=I/O error on GET request for "http://service-registry:8761/eureka/apps/": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) stacktrace=org.springframe
+work.web.client.ResourceAccessException: I/O error on GET request for "http://service-registry:8761/eureka/apps/": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connectio
+n refused)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:135)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:66)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:290)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+manufacturing-service    |      at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+manufacturing-service    |      at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+manufacturing-service    |      at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:374)
+manufacturing-service    |      at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:381)
+manufacturing-service    |      at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:184)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:371)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+manufacturing-service    |      at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:127)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:115)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+manufacturing-service    |      at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+manufacturing-service    |      at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:490)
+manufacturing-service    |      at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+manufacturing-service    |      at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+manufacturing-service    |      at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$f8fe95a7.getEurekaClient(<generated>)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:54)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+manufacturing-service    |      at java.base/java.lang.Iterable.forEach(Unknown Source)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+manufacturing-service    |      at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:934)
+manufacturing-service    |      at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585)
+manufacturing-service    |      at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+manufacturing-service    |      at keanri828.ookamicroservices.manufacturingservice.ManufacturingServiceApplication.main(ManufacturingServiceApplication.java:16)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+manufacturing-service    |      at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+manufacturing-service    |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:107)
+manufacturing-service    |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+manufacturing-service    |      at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+manufacturing-service    | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+manufacturing-service    |      at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+manufacturing-service    |      at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+manufacturing-service    |      at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+manufacturing-service    |      at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+manufacturing-service    |      at java.base/java.net.Socket.connect(Unknown Source)
+manufacturing-service    |      at java.base/java.net.Socket.connect(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+manufacturing-service    |      at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+manufacturing-service    |      at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+manufacturing-service    |      at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+manufacturing-service    |      ... 77 more
+manufacturing-service    |
+manufacturing-service    | 2021-03-18 23:20:18.081  WARN 1 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://service-registry:8761/eureka/app
+s/": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+manufacturing-service    | 2021-03-18 23:20:18.082  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084 - was unable to refresh its ca
+che! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known ser
+ver
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:283)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:279)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:66)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:290)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+manufacturing-service    |      at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+manufacturing-service    |      at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+manufacturing-service    |      at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:374)
+manufacturing-service    |      at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:381)
+manufacturing-service    |      at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:184)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:371)
+manufacturing-service    |      at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+manufacturing-service    |      at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:127)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:115)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+manufacturing-service    |      at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+manufacturing-service    |      at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:490)
+manufacturing-service    |      at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+manufacturing-service    |      at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+manufacturing-service    |      at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$EnhancerBySpringCGLIB$$f8fe95a7.getEurekaClient(<generated>)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:54)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:38)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:83)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+manufacturing-service    |      at java.base/java.lang.Iterable.forEach(Unknown Source)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+manufacturing-service    |      at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+manufacturing-service    |      at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:934)
+manufacturing-service    |      at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:585)
+manufacturing-service    |      at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+manufacturing-service    |      at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+manufacturing-service    |      at keanri828.ookamicroservices.manufacturingservice.ManufacturingServiceApplication.main(ManufacturingServiceApplication.java:16)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+manufacturing-service    |      at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+manufacturing-service    |      at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+manufacturing-service    |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:107)
+manufacturing-service    |      at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+manufacturing-service    |      at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
+manufacturing-service    |
+manufacturing-service    | 2021-03-18 23:20:18.082  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+manufacturing-service    | 2021-03-18 23:20:18.082  WARN 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+manufacturing-service    | 2021-03-18 23:20:18.084  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+manufacturing-service    | 2021-03-18 23:20:18.091  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+manufacturing-service    | 2021-03-18 23:20:18.106  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+manufacturing-service    | 2021-03-18 23:20:18.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1616109618113 with initial instances count: 0
+manufacturing-service    | 2021-03-18 23:20:18.118  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MANUFACTURING-SERVICE with eureka with status UP
+manufacturing-service    | 2021-03-18 23:20:18.119  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1616109618119, current=UP, previous=STARTING]
+analyse-service1         | 2021-03-18 23:20:18.181  INFO 1 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+api-gateway              | 2021-03-18 23:20:18.198  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cach
+e, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+api-gateway              | 2021-03-18 23:20:18.232  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+manufacturing-service    | 2021-03-18 23:20:18.302  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+manufacturing-service    | 2021-03-18 23:20:18.303  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+manufacturing-service    | 2021-03-18 23:20:18.353  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084: registering service...
+manufacturing-service    | 2021-03-18 23:20:18.375  INFO 1 --- [           main] k.o.m.ManufacturingServiceApplication    : Started ManufacturingServiceApplication in 10.746 seconds (JVM running for 12.802)
+api-gateway              | 2021-03-18 23:20:18.382  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+manufacturing-service    | 2021-03-18 23:20:18.444  INFO 1 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://service-registry:8761/eureka/}, except
+ion=I/O error on POST request for "http://service-registry:8761/eureka/apps/MANUFACTURING-SERVICE": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused) stac
+ktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://service-registry:8761/eureka/apps/MANUFACTURING-SERVICE": Connection refused (Connection refused); nested exception is java.net.Con
+nectException: Connection refused (Connection refused)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+manufacturing-service    |      at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+manufacturing-service    |      at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+manufacturing-service    |      at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+manufacturing-service    |      at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+manufacturing-service    |      at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+manufacturing-service    |      at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+manufacturing-service    |      at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+manufacturing-service    |      at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+manufacturing-service    |      at java.base/java.lang.Thread.run(Unknown Source)
+manufacturing-service    | Caused by: java.net.ConnectException: Connection refused (Connection refused)
+manufacturing-service    |      at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+manufacturing-service    |      at java.base/java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+manufacturing-service    |      at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+manufacturing-service    |      at java.base/java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+manufacturing-service    |      at java.base/java.net.Socket.connect(Unknown Source)
+manufacturing-service    |      at java.base/java.net.Socket.connect(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+manufacturing-service    |      at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+manufacturing-service    |      at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+manufacturing-service    |      at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+manufacturing-service    |      at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+manufacturing-service    |      at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+manufacturing-service    |      ... 22 more
+manufacturing-service    |
+manufacturing-service    | 2021-03-18 23:20:18.444  WARN 1 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://service-registry:8761/eureka/ap
+ps/MANUFACTURING-SERVICE": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+manufacturing-service    | 2021-03-18 23:20:18.458  WARN 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084 - registration failed Cannot e
+xecute request on any known server
+manufacturing-service    |
+manufacturing-service    | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+manufacturing-service    |
+manufacturing-service    | 2021-03-18 23:20:18.458  WARN 1 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+manufacturing-service    |
+manufacturing-service    | com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-1.10.11.jar!/:1.10.11]
+manufacturing-service    |      at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+manufacturing-service    |      at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+manufacturing-service    |
+service-registry         | 2021-03-18 23:20:18.473  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+service-registry         | 2021-03-18 23:20:18.473  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+service-registry         | 2021-03-18 23:20:18.474  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+service-registry         | 2021-03-18 23:20:18.474  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+api-gateway              | 2021-03-18 23:20:18.710  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+api-gateway              | 2021-03-18 23:20:18.710  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+analyse-service1         | 2021-03-18 23:20:18.739  INFO 1 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+service-registry         | 2021-03-18 23:20:18.784  INFO 1 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://service-registry:8761/eureka/
+service-registry         | 2021-03-18 23:20:18.800  INFO 1 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+service-registry         | 2021-03-18 23:20:18.834  INFO 1 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+analyse-service1         | 2021-03-18 23:20:18.854  WARN 1 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cach
+e, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+service-registry         | 2021-03-18 23:20:18.854  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+analyse-service1         | 2021-03-18 23:20:18.883  INFO 1 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+service-registry         | 2021-03-18 23:20:18.894  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+service-registry         | 2021-03-18 23:20:18.900  INFO 1 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+api-gateway              | 2021-03-18 23:20:18.979  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+api-gateway              | 2021-03-18 23:20:18.979  INFO 1 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+service-registry         | 2021-03-18 23:20:19.033  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+service-registry         | 2021-03-18 23:20:19.033  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+analyse-service1         | 2021-03-18 23:20:19.051  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+analyse-service1         | 2021-03-18 23:20:19.057  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+service-registry         | 2021-03-18 23:20:19.083  INFO 1 --- [           main] k.o.s.ServiceRegistryApplication         : Started ServiceRegistryApplication in 13.815 seconds (JVM running for 14.464)
+service-registry         | 2021-03-18 23:20:19.110  INFO 1 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+analyse-service1         | 2021-03-18 23:20:19.116  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+analyse-service1         | 2021-03-18 23:20:19.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+analyse-service1         | 2021-03-18 23:20:19.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+analyse-service1         | 2021-03-18 23:20:19.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+service-registry         | 2021-03-18 23:20:19.110  INFO 1 --- [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+service-registry         | 2021-03-18 23:20:19.110  INFO 1 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+service-registry         | 2021-03-18 23:20:19.110  INFO 1 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+analyse-service1         | 2021-03-18 23:20:19.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+analyse-service1         | 2021-03-18 23:20:19.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+service-registry         | 2021-03-18 23:20:19.111  INFO 1 --- [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+analyse-service1         | 2021-03-18 23:20:19.117  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+service-registry         | 2021-03-18 23:20:19.135  INFO 1 --- [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+api-gateway              | 2021-03-18 23:20:19.207  INFO 1 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway              | 2021-03-18 23:20:19.230  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+api-gateway              | 2021-03-18 23:20:19.231  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+api-gateway              | 2021-03-18 23:20:19.231  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+api-gateway              | 2021-03-18 23:20:19.231  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+api-gateway              | 2021-03-18 23:20:19.232  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+api-gateway              | 2021-03-18 23:20:19.232  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+api-gateway              | 2021-03-18 23:20:19.232  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+service-registry         | 2021-03-18 23:20:19.492  INFO 1 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+service-registry         | 2021-03-18 23:20:19.492  INFO 1 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+service-registry         | 2021-03-18 23:20:19.494  INFO 1 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+analyse-service1         | 2021-03-18 23:20:19.595  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+analyse-service1         | 2021-03-18 23:20:19.598  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+analyse-service1         | 2021-03-18 23:20:19.602  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+analyse-service1         | 2021-03-18 23:20:19.607  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1616109619606 with initial instances count: 0
+analyse-service1         | 2021-03-18 23:20:19.608  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ANALYSE-SERVICE1 with eureka with status UP
+analyse-service1         | 2021-03-18 23:20:19.609  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1616109619609, current=UP, previous=STARTING]
+analyse-service1         | 2021-03-18 23:20:19.611  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE1/73e37d517038:analyse-service1:8081: registering service...
+api-gateway              | 2021-03-18 23:20:19.615  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+api-gateway              | 2021-03-18 23:20:19.619  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+api-gateway              | 2021-03-18 23:20:19.622  INFO 1 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+api-gateway              | 2021-03-18 23:20:19.626  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1616109619625 with initial instances count: 0
+api-gateway              | 2021-03-18 23:20:19.628  INFO 1 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+api-gateway              | 2021-03-18 23:20:19.633  INFO 1 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1616109619629, current=UP, previous=STARTING]
+analyse-service1         | 2021-03-18 23:20:19.656  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+analyse-service1         | 2021-03-18 23:20:19.657  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+api-gateway              | 2021-03-18 23:20:19.653  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/c29dd1c27406:api-gateway:8080: registering service...
+api-gateway              | 2021-03-18 23:20:19.665  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+analyse-service1         | 2021-03-18 23:20:19.670  INFO 1 --- [           main] k.o.a.AnalyseService1Application         : Started AnalyseService1Application in 10.394 seconds (JVM running for 12.336)
+api-gateway              | 2021-03-18 23:20:19.671  INFO 1 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+api-gateway              | 2021-03-18 23:20:19.693  INFO 1 --- [           main] k.o.apigateway.ApiGatewayApplication     : Started ApiGatewayApplication in 12.375 seconds (JVM running for 13.903)
+service-registry         | 2021-03-18 23:20:19.736  INFO 1 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/c29dd1c27406:api-gateway:8080 with status UP (replication=false)
+service-registry         | 2021-03-18 23:20:19.737  INFO 1 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ANALYSE-SERVICE1/73e37d517038:analyse-service1:8081 with status UP (replication=false)
+analyse-service1         | 2021-03-18 23:20:19.740  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE1/73e37d517038:analyse-service1:8081 - registration status: 204
+api-gateway              | 2021-03-18 23:20:19.740  INFO 1 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/c29dd1c27406:api-gateway:8080 - registration status: 204
+service-registry         | 2021-03-18 23:20:20.322  INFO 1 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/c29dd1c27406:api-gateway:8080 with status UP (replication=true)
+service-registry         | 2021-03-18 23:20:20.323  INFO 1 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ANALYSE-SERVICE1/73e37d517038:analyse-service1:8081 with status UP (replication=true)
+api-gateway              | 2021-03-18 23:20:44.231  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+api-gateway              | 2021-03-18 23:20:44.232  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+api-gateway              | 2021-03-18 23:20:44.233  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+analyse-service2         | 2021-03-18 23:20:47.089  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+service-registry         | 2021-03-18 23:20:47.115  WARN 1 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: ANALYSE-SERVICE2 - 2671712e4f86:analyse-service2:80
+82
+service-registry         | 2021-03-18 23:20:47.115  WARN 1 --- [nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Renew): ANALYSE-SERVICE2 - 2671712e4f86:analyse-service2:8082
+analyse-service2         | 2021-03-18 23:20:47.121  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082 - Re-registering apps/ANALYSE-SERVICE2
+analyse-service2         | 2021-03-18 23:20:47.121  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082: registering service...
+analyse-service2         | 2021-03-18 23:20:47.124  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+service-registry         | 2021-03-18 23:20:47.132  INFO 1 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082 with status UP (replication=false)
+analyse-service2         | 2021-03-18 23:20:47.132  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082 - registration status: 204
+service-registry         | 2021-03-18 23:20:47.644  INFO 1 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ANALYSE-SERVICE2/2671712e4f86:analyse-service2:8082 with status UP (replication=true)
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+manufacturing-service    | 2021-03-18 23:20:48.086  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+service-registry         | 2021-03-18 23:20:48.111  WARN 1 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: MANUFACTURING-SERVICE - e98d04316892:manufacturing-
+service:8084
+service-registry         | 2021-03-18 23:20:48.111  WARN 1 --- [nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): MANUFACTURING-SERVICE - e98d04316892:manufacturing-service:8084
+manufacturing-service    | 2021-03-18 23:20:48.117  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084 - Re-registering apps/MANUFACT
+URING-SERVICE
+manufacturing-service    | 2021-03-18 23:20:48.118  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084: registering service...
+manufacturing-service    | 2021-03-18 23:20:48.122  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+service-registry         | 2021-03-18 23:20:48.128  INFO 1 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084 with status UP (replicatio
+n=false)
+manufacturing-service    | 2021-03-18 23:20:48.129  INFO 1 --- [tbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084 - registration status: 204
+service-registry         | 2021-03-18 23:20:48.639  INFO 1 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MANUFACTURING-SERVICE/e98d04316892:manufacturing-service:8084 with status UP (replicatio
+n=true)
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+analyse-service1         | 2021-03-18 23:20:49.599  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+analyse-service1         | 2021-03-18 23:20:49.607  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+api-gateway              | 2021-03-18 23:20:49.618  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+api-gateway              | 2021-03-18 23:20:49.647  INFO 1 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+service-registry         | 2021-03-18 23:21:19.111  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+analyse-service1         | 2021-03-18 23:21:38.265  INFO 1 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+analyse-service1         | 2021-03-18 23:21:38.265  INFO 1 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+analyse-service1         | 2021-03-18 23:21:38.267  INFO 1 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+service-registry         | 2021-03-18 23:22:19.111  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+service-registry         | 2021-03-18 23:23:19.111  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+service-registry         | 2021-03-18 23:24:19.111  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+analyse-service2         | 2021-03-18 23:25:16.612  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+manufacturing-service    | 2021-03-18 23:25:17.776  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+service-registry         | 2021-03-18 23:25:19.112  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+analyse-service1         | 2021-03-18 23:25:19.125  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+api-gateway              | 2021-03-18 23:25:19.235  INFO 1 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+service-registry         | 2021-03-18 23:26:19.111  INFO 1 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

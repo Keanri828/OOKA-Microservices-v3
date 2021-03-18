@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
 services:
   service-registry:
     container_name: service-registry
@@ -6,8 +6,10 @@ services:
       context: service-registry
       dockerfile: Dockerfile
     image: ooka-service-registry:latest
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
-      - 18761:8761
+      - 8761:8761
     networks:
       - spring-cloud-network
   api-gateway:
@@ -15,7 +17,11 @@ services:
     build:
       context: api-gateway
       dockerfile: Dockerfile
+    depends_on:
+      - service-registry
     image: ooka-api-gateway
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
       - 18080:8080
     networks:
@@ -25,7 +31,11 @@ services:
     build:
       context: manufacturing-service
       dockerfile: Dockerfile
+    depends_on:
+      - service-registry
     image: ooka-manufacturing-service:latest
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
       - 18084:8084
     networks:
@@ -35,7 +45,11 @@ services:
     build:
       context: analyse-service1
       dockerfile: Dockerfile
+    depends_on:
+      - service-registry
     image: ooka-analyse-service1:latest
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
       - 18081:8081
     networks:
@@ -45,7 +59,11 @@ services:
     build:
       context: analyse-service2
       dockerfile: Dockerfile
+    depends_on:
+      - service-registry
     image: ooka-analyse-service2:latest
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
       - 18082:8082
     networks:
@@ -55,7 +73,11 @@ services:
     build:
       context: persistency-service
       dockerfile: Dockerfile
+    depends_on:
+      - service-registry
     image: ooka-persistency-service:latest
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
       - 18085:8085
     networks:

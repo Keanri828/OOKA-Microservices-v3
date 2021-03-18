@@ -9,7 +9,7 @@ import {ConfigDto} from '../interfaces/config-dto';
 })
 export class ConnectionService {
 
-  private url = 'http://localhost:8080';
+  private url = 'http://localhost:18080';
   private configs: ConfigDto[] = [];
 
   constructor(private http: HttpClient) { }
