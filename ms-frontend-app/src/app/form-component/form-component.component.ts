@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {engineTypes} from '../interfaces/engine-types-const';
 import {MatRadioModule} from '@angular/material/radio';
@@ -6,13 +6,15 @@ import {configDictionary} from "../interfaces/config-dict";
 import { MatButton} from '@angular/material/button';
 import {ConnectionService} from "../services/connection.service";
 import {ConfigDto} from "../interfaces/config-dto";
+import { RxStompService } from '@stomp/ng2-stompjs';
+import { Message } from '@stomp/stompjs'
 
 @Component({
   selector: 'app-form-component',
   templateUrl: './form-component.component.html',
   styleUrls: ['./form-component.component.css']
 })
-export class FormComponentComponent implements OnInit {
+export class FormComponentComponent implements OnInit, OnDestroy {
 
   engineTypes = engineTypes;
   selectedEngine = '';
@@ -28,9 +30,19 @@ export class FormComponentComponent implements OnInit {
 
   results = {};
 
-  constructor(private cs: ConnectionService) { }
+  messages: string[] = [];
+  topicSubscription: any;
+
+  constructor(private cs: ConnectionService, private rxStompService: RxStompService) { }
+
+  ngOnDestroy(): void {
+        this.topicSubscription.unsubscribe();
+    }
 
   ngOnInit(): void {
+    this.topicSubscription = this.rxStompService.watch('/api/sockettest').subscribe((message: Message) => {
+      this.messages.push(message.body);
+    });
   }
 
   getPropertyTranslation(key: string): string {
@@ -70,4 +82,9 @@ export class FormComponentComponent implements OnInit {
       this.results['Analysis2'] = response.successful2;
     });
   }
+
+  onSendMessage(): void {
+    const message = `Message generated at ${new Date()}`;
+    this.rxStompService.publish({ destination: '/api/sockettest', body: message});
+  };
 }

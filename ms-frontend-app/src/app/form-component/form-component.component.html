@@ -18,5 +18,13 @@
   <div>
     {{results | json}}
   </div>
+  <hr>
+  <div class="websocket-test">
+    <button mat-raised-button (click)="onSendMessage()">Send Test Message</button>
+    <h2>Received Messages</h2>
+    <ol>
+      <li class="message" *ngFor="let message of messages"></li>
+    </ol>
+  </div>
 </div>
 
