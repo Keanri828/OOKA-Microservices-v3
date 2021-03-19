@@ -46,5 +46,10 @@ export class AnalysisHistoryComponent implements OnInit {
       + d.getHours() + ':' + d.getMinutes();
   }
 
+  // to change background color of insuccessful tasks
+  isSuccessful(element: ConfigDto): boolean {
+    return (element.successful1 && element.successful2);
+  }
+
 
 }

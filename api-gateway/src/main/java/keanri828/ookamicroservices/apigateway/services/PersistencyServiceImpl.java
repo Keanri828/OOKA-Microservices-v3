@@ -45,7 +45,7 @@ public class PersistencyServiceImpl implements PersistencyService {
                     .duplFuelFilter(false)
                     .fuelLeakageMonitor(true)
                     .successful1(true)
-                    .successful2(false)
+                    .successful2((i % 2) == 0)
                     .engineType(EngineTypeEnum.V10)
                     .timestamp(d)
                     .build());
