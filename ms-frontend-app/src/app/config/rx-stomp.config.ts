@@ -16,7 +16,7 @@ export const myRxStompConfig: InjectableRxStompConfig = {
 
   // reconnecting attempt
   // typical: 500ms
-  reconnectDelay: 200,
+  reconnectDelay: 0,
 
   // logs (not recommended in production)
   debug: (msg: string): void => {
