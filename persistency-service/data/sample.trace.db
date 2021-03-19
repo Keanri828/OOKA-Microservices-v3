@@ -1,0 +1,63 @@
+2021-03-18 02:28:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIG_ENTITY" not found; SQL statement:
+insert into config_entity (div_valve_dupl_filter, div_valve_fuel_filter, dupl_fuel_filter, engine_type, fuel_leakage_monitor, oil_repl_system, successful1, successful2, timestamp, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [42102-200]
+2021-03-18 02:30:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIG_ENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 02:36:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIG_ENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 02:38:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIGENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.divValveDuplFilter as divvalve2_0_0_, configenti0_.divValveFuelFilter as divvalve3_0_0_, configenti0_.duplFuelFilter as duplfuel4_0_0_, configenti0_.engineType as enginety5_0_0_, configenti0_.fuelLeakageMonitor as fuelleak6_0_0_, configenti0_.oilReplSystem as oilrepls7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 03:31:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIGENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.divValveDuplFilter as divvalve2_0_0_, configenti0_.divValveFuelFilter as divvalve3_0_0_, configenti0_.duplFuelFilter as duplfuel4_0_0_, configenti0_.engineType as enginety5_0_0_, configenti0_.fuelLeakageMonitor as fuelleak6_0_0_, configenti0_.oilReplSystem as oilrepls7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 03:36:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "config_entity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 03:51:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "config_entity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 03:54:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select *INFORMATION_SCHEMA[*].TABLES"; SQL statement:
+select *INFORMATION_SCHEMA.TABLES [42000-200]
+2021-03-18 04:02:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "config_entity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:06:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "config_entity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:21:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "config_entity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.div_valve_dupl_filter as div_valv2_0_0_, configenti0_.div_valve_fuel_filter as div_valv3_0_0_, configenti0_.dupl_fuel_filter as dupl_fue4_0_0_, configenti0_.engine_type as engine_t5_0_0_, configenti0_.fuel_leakage_monitor as fuel_lea6_0_0_, configenti0_.oil_repl_system as oil_repl7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from config_entity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:22:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ConfigEntity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.divValveDuplFilter as divvalve2_0_0_, configenti0_.divValveFuelFilter as divvalve3_0_0_, configenti0_.duplFuelFilter as duplfuel4_0_0_, configenti0_.engineType as enginety5_0_0_, configenti0_.fuelLeakageMonitor as fuelleak6_0_0_, configenti0_.oilReplSystem as oilrepls7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:28:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ConfigEntity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.divValveDuplFilter as divvalve2_0_0_, configenti0_.divValveFuelFilter as divvalve3_0_0_, configenti0_.duplFuelFilter as duplfuel4_0_0_, configenti0_.engineType as enginety5_0_0_, configenti0_.fuelLeakageMonitor as fuelleak6_0_0_, configenti0_.oilReplSystem as oilrepls7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:29:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ConfigEntity" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.divValveDuplFilter as divvalve2_0_0_, configenti0_.divValveFuelFilter as divvalve3_0_0_, configenti0_.duplFuelFilter as duplfuel4_0_0_, configenti0_.engineType as enginety5_0_0_, configenti0_.fuelLeakageMonitor as fuelleak6_0_0_, configenti0_.oilReplSystem as oilrepls7_0_0_, configenti0_.successful1 as successf8_0_0_, configenti0_.successful2 as successf9_0_0_, configenti0_.timestamp as timesta10_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:30:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ConfigEntity" not found; SQL statement:
+select configenti0_.id as id1_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:31:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ConfigEntity" not found; SQL statement:
+select configenti0_.id as id1_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-200]
+2021-03-18 04:46:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIGENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-198]
+2021-03-18 04:47:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIGENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.test as test2_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-198]
+2021-03-18 04:49:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CONFIGENTITY" not found; SQL statement:
+select configenti0_.id as id1_0_0_, configenti0_.test as test2_0_0_ from ConfigEntity configenti0_ where configenti0_.id=? [42102-198]
+2021-03-18 11:32:09 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ID[*]"; expected "INSERT"; SQL statement:
+ID [42001-198]
+2021-03-18 14:07:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ID[*]"; expected "INSERT"; SQL statement:
+ID [42001-198]
