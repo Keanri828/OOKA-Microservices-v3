@@ -40,7 +40,7 @@ export class FormComponentComponent implements OnInit, OnDestroy {
     }
 
   ngOnInit(): void {
-    this.topicSubscription = this.rxStompService.watch('/api/sockettest').subscribe((message: Message) => {
+    this.topicSubscription = this.rxStompService.watch('/socket/websocket').subscribe((message: Message) => {
       this.messages.push(message.body);
     });
   }

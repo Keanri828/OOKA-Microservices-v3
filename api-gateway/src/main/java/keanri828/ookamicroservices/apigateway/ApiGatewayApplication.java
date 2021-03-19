@@ -26,7 +26,6 @@ import java.util.UUID;
 @EnableEurekaClient
 @RestController
 @EnableFeignClients
-
 public class ApiGatewayApplication {
 
     @Autowired
