@@ -35,6 +35,7 @@ public class AnalyseService {
             Boolean res = restTemplate.postForObject("http://analyse-service2/analyse1/", httpEntity, Boolean.class);
             erg.add(dto.getFuelLeakageMonitor() && dto.getDivValveFuelFilter());
             erg.add(res);
+            state = "up";
         }catch(Exception ex){
             state="error";
             erg.add(dto.getFuelLeakageMonitor() && dto.getDivValveFuelFilter());
@@ -46,6 +47,11 @@ public class AnalyseService {
             }
         }
         state = "up";
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return erg;
     }
 

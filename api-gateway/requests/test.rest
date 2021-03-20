@@ -79,7 +79,10 @@ GET http://localhost:8085/config/get/7022a50e-ba13-4bd7-b23c-4b7ab88e0a17
 GET http://localhost:8085/config/get/all
 
 ###
-GET http://localhost:8081/actuator/health
+GET http://localhost:8081/actuator/health/working
+
+###
+GET http://localhost:8082/actuator/health/working
 
 ###
 GET http://localhost:8081/state

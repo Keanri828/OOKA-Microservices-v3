@@ -1,6 +1,7 @@
 package keanri828.ookamicroservices.apigateway.serviceHandlers;
 
 import keanri828.ookamicroservices.apigateway.model.AlgoStates;
+import keanri828.ookamicroservices.apigateway.model.AnalyseStatus;
 import keanri828.ookamicroservices.apigateway.model.ConfigDto;
 import keanri828.ookamicroservices.apigateway.model.EngineTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,9 +67,11 @@ public class ServiceHandlerImpl implements ServiceHandler {
     // get current states of analyse-services
     @Override
     public AlgoStates getStates() {
-        String state1 = restTemplate.getForObject("http://analyse-service1/state", String.class);
-        String state2 = restTemplate.getForObject("http://analyse-service2/state", String.class);
-        return AlgoStates.builder().state1(state1).state2(state2).build();
+
+        AnalyseStatus state1 = restTemplate.getForObject("http://analyse-service1/actuator/health/working", AnalyseStatus.class);
+        AnalyseStatus state2 = restTemplate.getForObject("http://analyse-service1/actuator/health/working", AnalyseStatus.class);
+        //String state2 = restTemplate.getForObject("http://analyse-service2/state", String.class);
+        return AlgoStates.builder().state1(state1.getStatus()).state2(state2.getStatus()).build();
     }
 
     @Override

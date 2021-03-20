@@ -14,6 +14,11 @@ public class AnalyseService {
             Thread.currentThread().interrupt();
         }
         state = "up";
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return dto.getFuelLeakageMonitor() && dto.getDivValveFuelFilter();
     }
 
