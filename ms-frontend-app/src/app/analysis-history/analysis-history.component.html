@@ -10,7 +10,7 @@
     </th>
     <td mat-cell *matCellDef="let element" [ngSwitch]="column">
       <span *ngSwitchCase="'id'">
-        <button mat-raised-button color="primary" (click)="retry(element.id)">Retry</button>
+        <button mat-raised-button color="primary" (click)="retry(element)">Retry</button>
       </span>
       <span *ngSwitchCase="'timestamp'">{{reformatDate(element['timestamp'])}}</span>
       <span *ngSwitchCase="'engineType'">{{element[column]}}</span>
