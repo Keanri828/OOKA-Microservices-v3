@@ -13,4 +13,5 @@ public interface ServiceHandler {
     public List<ConfigDto> getAllConfig();
     public ConfigDto analyse(ConfigDto dto);
     public AlgoStates getStates();
+    public ConfigDto retry(UUID id);
 }

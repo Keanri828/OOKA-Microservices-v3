@@ -72,4 +72,11 @@ public class ServiceHandlerImpl implements ServiceHandler {
     public void deleteConfigById(UUID id) {
         restTemplate.delete("http://manufacturing-service/delete/all");
     }
+
+    @Override
+    public ConfigDto retry(UUID id){
+        ConfigDto dto = getConfigById(id);
+        dto = analyse(dto);
+        return dto;
+    }
 }

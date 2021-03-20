@@ -128,6 +128,13 @@ public class ApiGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
     }
+    @GetMapping(
+            value = "/api/retry/{id}",
+            produces = "application/json"
+    )
+    public ConfigDto retryConfig(@PathVariable UUID id){
 
+        return serviceHandler.retry(id);
+    }
 
 }
