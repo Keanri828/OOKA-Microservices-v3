@@ -37,7 +37,7 @@ public class PersistencyServiceApplication {
             consumes = "application/json",
             produces = "application/json"
     )
-    public UUID analyseConfig(@RequestBody ConfigEntity dto){
+    public UUID saveConfig(@RequestBody ConfigEntity dto){
 
        return configPersistencyService.save(dto);
     }
@@ -66,5 +66,14 @@ public class PersistencyServiceApplication {
     public void deleteCondigById(@PathVariable UUID id) {
         configPersistencyService.deleteById(id);
     }
+
+    @DeleteMapping(
+            value = "/config/delete/all"
+    )
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteCondigById() {
+        configPersistencyService.deleteAll();
+    }
+
 
 }

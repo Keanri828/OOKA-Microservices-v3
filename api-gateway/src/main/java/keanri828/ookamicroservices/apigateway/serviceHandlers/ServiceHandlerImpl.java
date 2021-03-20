@@ -21,24 +21,21 @@ public class ServiceHandlerImpl implements ServiceHandler {
     RestTemplate restTemplate;
 
     @Override
-    public UUID saveConfig(ConfigDto configDto) {
-        // todo send request to Microservice
-        return UUID.randomUUID();
+    public UUID saveConfig(ConfigDto dto) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<ConfigDto> httpEntity = new HttpEntity<>(dto, headers);
+        return restTemplate.postForObject("http://manufacturing-service/save/", httpEntity, UUID.class);
     }
 
     @Override
     public ConfigDto getConfigById(UUID id) {
-        // todo send request to Microservice
-        return ConfigDto.builder()
-                .id(id)
-                .divValveDuplFilter(true)
-                .engineType(EngineTypeEnum.V10)
-                .build();
+        return restTemplate.getForObject("http://manufacturing-service/get/"+id.toString(), ConfigDto.class);
     }
 
     @Override
     public List<ConfigDto> getAllConfig(){
-        // todo no real implementation, just a data mockup
         List<ConfigDto> res;
         ConfigDto[] dto = restTemplate.getForObject("http://persistency-service/config/get/all/", ConfigDto[].class);
         res = Arrays.asList(dto);
@@ -53,14 +50,11 @@ public class ServiceHandlerImpl implements ServiceHandler {
 
         HttpEntity<ConfigDto> httpEntity = new HttpEntity<>(dto, headers);
         //System.out.println(httpEntity.getBody().toString());
-        Boolean[] res;
+
 
         //res = restTemplate.postForObject("http://localhost:8081/analyse1/", httpEntity, Boolean.class);
-        res = restTemplate.postForObject("http://analyse-service1/analyse1/", httpEntity, Boolean[].class);
-        List<Boolean> result = Arrays.asList(res);
+        dto = restTemplate.postForObject("http://manufacturing-service/analyse/", httpEntity, ConfigDto.class);
 
-        dto.setSuccessful1(result.get(0));
-        dto.setSuccessful2(result.get(1));
         return dto;
     }
 
@@ -76,6 +70,13 @@ public class ServiceHandlerImpl implements ServiceHandler {
 
     @Override
     public void deleteConfigById(UUID id) {
-        // todo send request to Microservice
+        restTemplate.delete("http://manufacturing-service/delete/all");
+    }
+
+    @Override
+    public ConfigDto retry(UUID id){
+        ConfigDto dto = getConfigById(id);
+        dto = analyse(dto);
+        return dto;
     }
 }

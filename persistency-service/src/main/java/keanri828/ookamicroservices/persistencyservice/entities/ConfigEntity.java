@@ -36,6 +36,8 @@ public class ConfigEntity {
 
     private Boolean fuelLeakageMonitor;
 
+    @CreationTimestamp
+    @Column(updatable = false)
     private Date timestamp; // for sorting in history
 
     private Boolean successful1;
