@@ -50,7 +50,7 @@ public class AnalyseService1Application {
             consumes = "application/json",
             produces = "application/json"
     )
-    public List<Boolean> analyseConfig(@RequestBody @Valid ConfigDto dto){
+    public List<Boolean> analyseConfig(@RequestBody ConfigDto dto){
         return analyseService.analyseConfig(dto);
     }
 
