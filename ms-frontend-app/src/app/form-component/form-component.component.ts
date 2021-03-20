@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {engineTypes} from '../interfaces/engine-types-const';
 import {MatRadioModule} from '@angular/material/radio';
-import {configDictionary} from "../interfaces/config-dict";
+import {configDictionary} from '../interfaces/config-dict';
 import { MatButton} from '@angular/material/button';
-import {ConnectionService} from "../services/connection.service";
-import {ConfigDto} from "../interfaces/config-dto";
+import {ConnectionService} from '../services/connection.service';
+import {ConfigDto} from '../interfaces/config-dto';
+import {interval, Observable, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-form-component',
@@ -16,6 +17,12 @@ export class FormComponentComponent implements OnInit {
 
   engineTypes = engineTypes;
   selectedEngine = '';
+  private analysisRunning = false;
+  states = {
+    state1: null,
+    state2: null
+  };
+  private wtf: Subscription;
 
   optionalComponents = {
     oilReplSystem: false,
@@ -48,7 +55,7 @@ export class FormComponentComponent implements OnInit {
         this.dataToSubmit[key] = null;
       }
     });*/
-
+    this.analysisRunning = true;
     this.results = {}; // reset
     let dto: ConfigDto;
     dto = new ConfigDto(
@@ -68,6 +75,19 @@ export class FormComponentComponent implements OnInit {
     this.cs.http_submit(dto).subscribe(response => {
       this.results['Analysis1'] = response.successful1;
       this.results['Analysis2'] = response.successful2;
+      this.analysisRunning = false;
+      this.wtf.unsubscribe();
     });
+
+    this.wtf = interval(2000).subscribe(val => {
+      console.log('Requesting states...');
+      this.cs.getStates().subscribe(response => {
+        this.states = response;
+      });
+    });
+  }
+
+  analyseButtonDisabled(): boolean {
+    return (this.selectedEngine.length === 0) || this.analysisRunning;
   }
 }

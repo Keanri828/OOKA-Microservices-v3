@@ -81,7 +81,7 @@ public class ServiceHandlerImpl implements ServiceHandler {
     public AlgoStates getStates() {
         String state1 = restTemplate.getForObject("http://analyse-service1/state", String.class);
         String state2 = restTemplate.getForObject("http://analyse-service2/state", String.class);
-        return AlgoStates.builder().status1(state1).status2(state2).build();
+        return AlgoStates.builder().state1(state1).state2(state2).build();
     }
 
     @Override

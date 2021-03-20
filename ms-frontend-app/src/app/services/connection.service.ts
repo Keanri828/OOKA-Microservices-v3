@@ -30,4 +30,9 @@ export class ConnectionService {
     // @ts-ignore
     return this.http.post(completeUrl, dto, options);
   }
+
+  getStates(): Observable<any> {
+    const completeUrl = this.url + '/api/state';
+    return this.http.get(completeUrl);
+  }
 }

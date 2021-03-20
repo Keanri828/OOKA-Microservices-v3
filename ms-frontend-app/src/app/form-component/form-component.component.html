@@ -14,9 +14,10 @@
       <mat-radio-button class="optional-radio-button" [value]="false">no</mat-radio-button>
     </mat-radio-group>
   </div>
-  <button mat-raised-button color="primary" (click)="analyse()" [disabled]="selectedEngine.length == 0">Analyze</button>
+  <button mat-raised-button color="primary" (click)="analyse()" [disabled]="analyseButtonDisabled()">Analyze</button>
   <div>
     {{results | json}}
+    {{states | json}}
   </div>
 </div>
 

@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AlgoStates {
-    private String status1;
-    private String status2;
+    private String state1;
+    private String state2;
 }
