@@ -47,4 +47,7 @@ export class AnalysisHistoryComponent implements OnInit {
   }
 
 
+  isSuccessful(element: ConfigDto): boolean {
+    return (element.successful1 && element.successful2);
+  }
 }

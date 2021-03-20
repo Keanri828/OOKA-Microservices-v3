@@ -97,6 +97,22 @@ public class ApiGatewayApplication {
         return persistencyService.analyse(dto);
     }
 
+    @GetMapping(
+            value = "/api/status/{id}",
+            produces = "application/json"
+    )
+    public ConfigDto getStatus(@PathVariable UUID id) {
+        return new ConfigDto(); // todo impl: Status (NICHT CONFIGDTO) beider Services unter der Betrachtung dieser ID
+    }
+
+    @GetMapping(
+            value = "/api/results/{id}",
+            produces = "application/json"
+    )
+    public ConfigDto fetchResults(@PathVariable UUID id) {
+        return new ConfigDto(); // todo impl: NICHT CONFIGDTO, nur Ergebnisse
+    }
+
 
 
     //Tesing END can be removed if implemented

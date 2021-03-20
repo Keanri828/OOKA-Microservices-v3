@@ -16,5 +16,5 @@
     </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="configKeys"></tr>
-  <tr mat-row *matRowDef="let row; columns: configKeys;"></tr>
+  <tr mat-row *matRowDef="let row; columns: configKeys;" [ngClass]="{'insuccessful': !isSuccessful(row), 'successful': isSuccessful(row)}"></tr>
 </table>

@@ -5,3 +5,11 @@
 th, td {
   text-align: center;
 }
+
+.insuccessful {
+  background-color: #e38888;
+}
+
+.successful {
+  background-color: #88e39a;
+}
