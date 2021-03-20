@@ -37,7 +37,7 @@ services:
     environment:
       - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
-      - 18084:8084
+      - 18086:8084
     networks:
       - spring-cloud-network
   analyse-service1:
@@ -51,7 +51,7 @@ services:
     environment:
       - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
-      - 18081:8081
+      - 18081-18082:8081
     networks:
       - spring-cloud-network
   analyse-service2:
@@ -65,7 +65,7 @@ services:
     environment:
       - eureka.client.serviceUrl.defaultZone=http://service-registry:8761/eureka/
     ports:
-      - 18082:8082
+      - 18083-18084:8082
     networks:
       - spring-cloud-network
   persistency-service:
