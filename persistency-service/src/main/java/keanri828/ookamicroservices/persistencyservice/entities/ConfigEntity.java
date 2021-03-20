@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Type;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,8 +37,9 @@ public class ConfigEntity {
 
     private Boolean fuelLeakageMonitor;
 
-    @CreationTimestamp
-    @Column(updatable = false)
+    //@CreationTimestamp
+    @UpdateTimestamp
+    //@Column(updatable = false)
     private Date timestamp; // for sorting in history
 
     private Boolean successful1;
