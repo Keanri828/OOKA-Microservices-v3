@@ -38,7 +38,7 @@ export class FormComponentComponent implements OnInit {
   constructor(private cs: ConnectionService) { }
 
   ngOnInit(): void {
-    this.cs.getStates().subscribe(response => {
+    this.cs.http_getStates().subscribe(response => {
       this.states = response;
     });
   }
@@ -70,14 +70,14 @@ export class FormComponentComponent implements OnInit {
       this.results['Analysis2'] = response.successful2;
       this.analysisRunning = false;
       this.stateSub.unsubscribe();
-      this.cs.getStates().subscribe(states => {
+      this.cs.http_getStates().subscribe(states => {
         this.states = states;
       });
     });
 
     this.stateSub = interval(2000).subscribe(val => {
       console.log('Requesting states...');
-      this.cs.getStates().subscribe(response => {
+      this.cs.http_getStates().subscribe(response => {
         this.states = response;
       });
     });
