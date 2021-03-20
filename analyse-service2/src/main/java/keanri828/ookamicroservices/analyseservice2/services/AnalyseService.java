@@ -1,9 +1,7 @@
-package keanri828.ookamicroservices.analyseservice1.services;
+package keanri828.ookamicroservices.analyseservice2.services;
 
-import keanri828.ookamicroservices.analyseservice1.model.ConfigDto;
+import keanri828.ookamicroservices.analyseservice2.model.ConfigDto;
 import org.springframework.stereotype.Service;
-
-
 
 @Service
 public class AnalyseService {

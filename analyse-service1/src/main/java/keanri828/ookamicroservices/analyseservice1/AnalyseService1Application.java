@@ -51,4 +51,9 @@ public class AnalyseService1Application {
     )
     public String testString(){return "Test Erfolgreich MService UP";}
 
+    @GetMapping(
+            value = "/state",
+            produces = "application/json"
+    )
+    public String getState(){return  analyseService.getState();}
 }
