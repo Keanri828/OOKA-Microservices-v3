@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.ObjectInputFilter;
 import java.util.*;
 
 @Service
@@ -37,23 +38,9 @@ public class ServiceHandlerImpl implements ServiceHandler {
     @Override
     public List<ConfigDto> getAllConfig(){
         // todo no real implementation, just a data mockup
-        List<ConfigDto> res= new ArrayList<>();
-        for (int i = 0; i<4;i++) {
-            Date d = new Date();
-            d.setHours(i + 2);
-            res.add(ConfigDto.builder()
-                    .id(UUID.randomUUID())
-                    .divValveDuplFilter(true)
-                    .divValveFuelFilter(true)
-                    .oilReplSystem(false)
-                    .duplFuelFilter(false)
-                    .fuelLeakageMonitor(true)
-                    .successful1(true)
-                    .successful2(i % 2 == 0)
-                    .engineType(EngineTypeEnum.V10)
-                    .timestamp(d)
-                    .build());
-        }
+        List<ConfigDto> res;
+        ConfigDto[] dto = restTemplate.getForObject("http://persistency-service/config/get/all/", ConfigDto[].class);
+        res = Arrays.asList(dto);
         return res;
     }
 
