@@ -13,3 +13,7 @@ th, td {
 .successful {
   background-color: #88e39a;
 }
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}

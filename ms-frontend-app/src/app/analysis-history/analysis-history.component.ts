@@ -31,7 +31,7 @@ export class AnalysisHistoryComponent implements OnInit {
     });
   }
 
-  loadConfig(id: string): void {
+  retry(id: string): void {
     console.log('Lade Konfiguration mit der ID ' + id);
     // todo
   }
@@ -49,5 +49,15 @@ export class AnalysisHistoryComponent implements OnInit {
 
   isSuccessful(element: ConfigDto): boolean {
     return (element.successful1 && element.successful2);
+  }
+
+  refresh(): void {
+    this.cs.http_getAll().subscribe(configs => {
+      this.configurationHistory = configs;
+      // console.log(configs);
+      this.configurationHistory.sort((a, b) => {
+        return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+      });
+    });
   }
 }
