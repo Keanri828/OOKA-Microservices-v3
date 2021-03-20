@@ -10,6 +10,7 @@ export class ConnectionService {
 
   private url = 'http://localhost:8080';
   @Output() public dataChanged: EventEmitter<any> = new EventEmitter();
+  @Output() public retryEvent: EventEmitter<ConfigDto> = new EventEmitter<ConfigDto>();
 
   constructor(private http: HttpClient) { }
 
@@ -38,4 +39,15 @@ export class ConnectionService {
   public emitDataChangedEvent(): void {
     this.dataChanged.emit(null);
   }
+
+  public emitRetryEvent(dto: ConfigDto): void {
+    this.retryEvent.emit(dto);
+  }
+
+  public http_retry(id: string): Observable<ConfigDto> {
+    const completeUrl = this.url + '/api/retry/' + id;
+    // @ts-ignore
+    return this.http.get(completeUrl);
+  }
+
 }

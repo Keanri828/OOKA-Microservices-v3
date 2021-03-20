@@ -4,7 +4,7 @@ import {ConnectionService} from '../services/connection.service';
 import { MatTableModule } from '@angular/material/table';
 import {configDictionary} from '../interfaces/config-dict';
 import {MatButtonModule} from '@angular/material/button';
-import {Subscription} from "rxjs";
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-analysis-history',
@@ -39,9 +39,9 @@ export class AnalysisHistoryComponent implements OnInit, OnDestroy {
     });
   }
 
-  retry(id: string): void {
-    console.log('Lade Konfiguration mit der ID ' + id);
-    // todo
+  retry(dto: ConfigDto): void {
+    console.log('Führe Analyse erneut durch:' + dto.id);
+    this.cs.emitRetryEvent(dto);
   }
 
   getPropertyTranslation(key: string): string {
