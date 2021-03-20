@@ -65,12 +65,14 @@ public class ServiceHandlerImpl implements ServiceHandler {
 
         HttpEntity<ConfigDto> httpEntity = new HttpEntity<>(dto, headers);
         //System.out.println(httpEntity.getBody().toString());
-        Boolean res;
+        Boolean[] res;
 
         //res = restTemplate.postForObject("http://localhost:8081/analyse1/", httpEntity, Boolean.class);
-        res = restTemplate.postForObject("http://analyse-service1/analyse1/", httpEntity, Boolean.class);
+        res = restTemplate.postForObject("http://analyse-service1/analyse1/", httpEntity, Boolean[].class);
+        List<Boolean> result = Arrays.asList(res);
 
-        dto.setSuccessful1(res);
+        dto.setSuccessful1(result.get(0));
+        dto.setSuccessful2(result.get(1));
         return dto;
     }
 

@@ -8,14 +8,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @EnableFeignClients
 @SpringBootApplication
@@ -35,13 +39,18 @@ public class AnalyseService1Application {
     AnalysService1Feign analysService1Feign;
     @Autowired
     AnalyseService analyseService;
+    @LoadBalanced
+    @Bean
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 
     @PostMapping(
             value = "/analyse1",
             consumes = "application/json",
             produces = "application/json"
     )
-    public Boolean analyseConfig(@RequestBody @Valid ConfigDto dto){
+    public List<Boolean> analyseConfig(@RequestBody @Valid ConfigDto dto){
         return analyseService.analyseConfig(dto);
     }
 

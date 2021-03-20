@@ -39,7 +39,6 @@ public class AnalyseService2Application {
     AnalysService1Feign analysService1Feign;
     @Autowired
     AnalyseService analyseService;
-
     @PostMapping(
             value = "/analyse1",
             consumes = "application/json",
