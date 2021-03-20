@@ -22,7 +22,7 @@ export class FormComponentComponent implements OnInit {
     state1: null,
     state2: null
   };
-  private wtf: Subscription;
+  private stateSub: Subscription;
 
   optionalComponents = {
     oilReplSystem: false,
@@ -38,6 +38,9 @@ export class FormComponentComponent implements OnInit {
   constructor(private cs: ConnectionService) { }
 
   ngOnInit(): void {
+    this.cs.getStates().subscribe(response => {
+      this.states = response;
+    });
   }
 
   getPropertyTranslation(key: string): string {
@@ -45,16 +48,6 @@ export class FormComponentComponent implements OnInit {
   }
 
   analyse(): void {
-    // generate dto
-    /*Object.keys(configDictionary).forEach(key => {
-      if (this.optionalComponentsKeys.includes(key)) {
-        this.dataToSubmit[key] = this.optionalComponents[key];
-      } else if (key === 'engineType') {
-        this.dataToSubmit[key] = this.selectedEngine;
-      } else {
-        this.dataToSubmit[key] = null;
-      }
-    });*/
     this.analysisRunning = true;
     this.results = {}; // reset
     let dto: ConfigDto;
@@ -71,15 +64,18 @@ export class FormComponentComponent implements OnInit {
       null
     );
 
-    // todo idealerweise WebSocket, um den Status verfolgen zu können
+    // WebSocket wäre besser, aber funktioniert nicht bisher
     this.cs.http_submit(dto).subscribe(response => {
       this.results['Analysis1'] = response.successful1;
       this.results['Analysis2'] = response.successful2;
       this.analysisRunning = false;
-      this.wtf.unsubscribe();
+      this.stateSub.unsubscribe();
+      this.cs.getStates().subscribe(states => {
+        this.states = states;
+      });
     });
 
-    this.wtf = interval(2000).subscribe(val => {
+    this.stateSub = interval(2000).subscribe(val => {
       console.log('Requesting states...');
       this.cs.getStates().subscribe(response => {
         this.states = response;
