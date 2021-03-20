@@ -1,0 +1,64 @@
+POST http://localhost:8085/config/save
+Content-Type: application/json
+
+{
+  "id": "",
+  "engineType": "V10",
+  "oilReplSystem": true,
+  "divValveDuplFilter": true,
+  "duplFuelFilter": false,
+  "divValveFuelFilter": true,
+  "fuelLeakageMonitor": true,
+  "timestamp": null,
+  "successful1": null,
+  "successful2": null
+}
+###
+POST http://localhost:8085/config/save
+Content-Type: application/json
+
+{
+"id": "",
+"engineType": "V10",
+"oilReplSystem": true,
+"divValveDuplFilter": true,
+"duplFuelFilter": false,
+"divValveFuelFilter": true,
+"fuelLeakageMonitor": true,
+"timestamp": null,
+"successful1": null,
+"successful2": null
+}
+###
+POST http://localhost:8085/config/save
+Content-Type: application/json
+
+{
+  "id": "",
+  "engineType": "V10",
+  "oilReplSystem": true,
+  "divValveDuplFilter": true,
+  "duplFuelFilter": false,
+  "divValveFuelFilter": true,
+  "fuelLeakageMonitor": true,
+  "timestamp": null,
+  "successful1": null,
+  "successful2": null
+}
+###
+POST http://localhost:8085/config/save
+Content-Type: application/json
+
+{
+  "id": "",
+  "engineType": "V10",
+  "oilReplSystem": true,
+  "divValveDuplFilter": true,
+  "duplFuelFilter": false,
+  "divValveFuelFilter": true,
+  "fuelLeakageMonitor": true,
+  "timestamp": null,
+  "successful1": null,
+  "successful2": null
+}
+###

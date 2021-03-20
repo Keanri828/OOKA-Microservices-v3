@@ -20,6 +20,7 @@ public class AnalyseService {
     RestTemplate restTemplate;
 
     public List<Boolean> analyseConfig(ConfigDto dto){
+        System.out.println(dto.toString());
         state = "running";
         try {
             Thread.sleep(10000);

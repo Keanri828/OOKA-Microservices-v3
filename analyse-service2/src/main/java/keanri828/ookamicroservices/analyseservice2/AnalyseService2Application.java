@@ -44,7 +44,7 @@ public class AnalyseService2Application {
             consumes = "application/json",
             produces = "application/json"
     )
-    public Boolean analyseConfig(@RequestBody @Valid ConfigDto dto){
+    public Boolean analyseConfig(@RequestBody ConfigDto dto){
         return analyseService.analyseConfig(dto);
     }
 
