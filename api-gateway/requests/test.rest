@@ -56,7 +56,7 @@ GET http://localhost:8081/
 GET http://analyse-service1/
 
 ###
-POST http://localhost:8084/save
+POST http://localhost:8080/api/save
 Content-Type: application/json
 
 {
@@ -68,7 +68,7 @@ Content-Type: application/json
   "divValveFuelFilter": true,
   "fuelLeakageMonitor": true,
   "timestamp": null,
-  "successful1": true,
+  "successful1": null,
   "successful2": null
 }
 
@@ -91,6 +91,6 @@ GET http://localhost:8081/state
 GET http://localhost:18082/
 
 ###
-GET http://localhost:8084/get/8b0170d8-7440-44b5-98c2-fdb4142bb687
+DELETE http://localhost:8084/delete/all
 
 ###

@@ -31,6 +31,7 @@ public class ManufacturingService {
 
         dto.setSuccessful1(result.get(0));
         dto.setSuccessful2(result.get(1));
+        saveConfig(dto);
         return dto;
     }
     public void deleteConfig(){

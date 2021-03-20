@@ -69,7 +69,7 @@ public class ApiGatewayApplication {
      * @param dto
      * @return
      */
-    @CrossOrigin(origins = "http://localhost:4200")
+   /* @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(
             value = "/api/save",
             consumes = "application/json",
@@ -77,7 +77,7 @@ public class ApiGatewayApplication {
     )
     public UUID saveConfig(@RequestBody @Valid ConfigDto dto){
         return serviceHandler.saveConfig(dto);
-    }
+    }*/
 
     //todo Testing of consuming rest of other ms by using eureka------
 
@@ -117,13 +117,13 @@ public class ApiGatewayApplication {
 
     //Tesing END can be removed if implemented
 
-    @DeleteMapping(
+    /*@DeleteMapping(
             value = "/api/{id}"
     )
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCondigById(@PathVariable UUID id) {
         serviceHandler.deleteConfigById(id);
-    }
+    }*/
 
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
