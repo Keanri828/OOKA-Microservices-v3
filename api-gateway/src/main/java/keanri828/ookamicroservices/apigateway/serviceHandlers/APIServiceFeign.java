@@ -1,4 +1,4 @@
-package keanri828.ookamicroservices.apigateway.services;
+package keanri828.ookamicroservices.apigateway.serviceHandlers;
 
 import org.springframework.cloud.openfeign.FeignClient;
 

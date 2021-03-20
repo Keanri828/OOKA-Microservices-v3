@@ -1,9 +1,10 @@
 package keanri828.ookamicroservices.apigateway;
 
 import com.netflix.discovery.EurekaClient;
+import keanri828.ookamicroservices.apigateway.model.AlgoStates;
 import keanri828.ookamicroservices.apigateway.model.ConfigDto;
-import keanri828.ookamicroservices.apigateway.services.APIServiceFeign;
-import keanri828.ookamicroservices.apigateway.services.PersistencyService;
+import keanri828.ookamicroservices.apigateway.serviceHandlers.APIServiceFeign;
+import keanri828.ookamicroservices.apigateway.serviceHandlers.ServiceHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,7 +13,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +30,7 @@ import java.util.UUID;
 public class ApiGatewayApplication {
 
     @Autowired
-    private PersistencyService persistencyService;
+    private ServiceHandler serviceHandler;
 
     @Autowired
     private APIServiceFeign apiServiceFeign;
@@ -51,7 +51,7 @@ public class ApiGatewayApplication {
             produces = "application/json"
     )
     public ConfigDto getConfigById(@PathVariable UUID id){
-        return persistencyService.getConfigById(id);
+        return serviceHandler.getConfigById(id);
     }
 
 
@@ -61,7 +61,7 @@ public class ApiGatewayApplication {
             produces = "application/json"
     )
     public List<ConfigDto> getAllConfig(){
-        return persistencyService.getAllConfig();
+        return serviceHandler.getAllConfig();
     }
 
     /** aktuell eigentlich nur zum Testen des Endpunkts. Die Konfiguration soll automatisch
@@ -76,7 +76,7 @@ public class ApiGatewayApplication {
             produces = "application/json"
     )
     public UUID saveConfig(@RequestBody @Valid ConfigDto dto){
-        return persistencyService.saveConfig(dto);
+        return serviceHandler.saveConfig(dto);
     }
 
     //todo Testing of consuming rest of other ms by using eureka------
@@ -94,24 +94,24 @@ public class ApiGatewayApplication {
     )
     public ConfigDto analyseConfig(@RequestBody @Valid ConfigDto dto){
 
-        return persistencyService.analyse(dto);
+        return serviceHandler.analyse(dto);
     }
 
     @GetMapping(
-            value = "/api/status/{id}",
+            value = "/api/state",
             produces = "application/json"
     )
-    public ConfigDto getStatus(@PathVariable UUID id) {
-        return new ConfigDto(); // todo impl: Status (NICHT CONFIGDTO) beider Services unter der Betrachtung dieser ID
+    public AlgoStates getStates() {
+        return serviceHandler.getStates();
     }
 
-    @GetMapping(
+    /*@GetMapping(
             value = "/api/results/{id}",
             produces = "application/json"
     )
     public ConfigDto fetchResults(@PathVariable UUID id) {
         return new ConfigDto(); // todo impl: NICHT CONFIGDTO, nur Ergebnisse
-    }
+    }*/
 
 
 
@@ -122,7 +122,7 @@ public class ApiGatewayApplication {
     )
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCondigById(@PathVariable UUID id) {
-        persistencyService.deleteConfigById(id);
+        serviceHandler.deleteConfigById(id);
     }
 
     public static void main(String[] args) {
