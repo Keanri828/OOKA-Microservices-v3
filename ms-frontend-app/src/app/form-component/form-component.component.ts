@@ -73,6 +73,7 @@ export class FormComponentComponent implements OnInit {
       this.cs.http_getStates().subscribe(states => {
         this.states = states;
       });
+      this.cs.emitDataChangedEvent();
     });
 
     this.stateSub = interval(2000).subscribe(val => {
