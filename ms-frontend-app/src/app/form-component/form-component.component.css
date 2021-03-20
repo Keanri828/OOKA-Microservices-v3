@@ -1,6 +1,20 @@
-#outerDiv {
-  padding: 5%
+@media only screen and (min-width: 500px) {
+  #outerDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
 }
+
+@media only screen and (max-width: 500px) {
+  #outerDiv {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+  }
+}
+
+
 
 .optional-radio-group {
   display: flex;
@@ -10,4 +24,26 @@
 
 .optional-radio-button {
   margin: 5px;
+}
+
+#form-card {
+  margin: 2%;
+}
+
+#state-card {
+  max-height: 200px;
+  margin: 2%;
+}
+
+#result-card {
+  max-height: 200px;
+  margin: 2%;
+}
+
+.success {
+  color: darkgreen;
+}
+
+.failure {
+  color: darkred;
 }

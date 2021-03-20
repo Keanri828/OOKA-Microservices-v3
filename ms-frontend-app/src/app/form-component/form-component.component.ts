@@ -17,7 +17,7 @@ export class FormComponentComponent implements OnInit, OnDestroy {
 
   engineTypes = engineTypes;
   selectedEngine = '';
-  private analysisRunning = false;
+  analysisRunning = false;
   states = {
     state1: null,
     state2: null
@@ -126,5 +126,9 @@ export class FormComponentComponent implements OnInit, OnDestroy {
         this.states = stateResponse;
       });
     });
+  }
+
+  noResults(): boolean {
+    return Object.keys(this.results).length === 0;
   }
 }

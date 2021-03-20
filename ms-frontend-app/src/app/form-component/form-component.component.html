@@ -1,23 +1,60 @@
 <div id="outerDiv">
-  <mat-form-field>
-    <mat-label>engine type</mat-label>
-    <mat-select [(ngModel)]="selectedEngine">
-      <mat-option *ngFor="let engine of engineTypes" [value]="engine">
-        {{engine}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <div *ngFor="let key of optionalComponentsKeys">
-    <mat-label>{{getPropertyTranslation(key)}}</mat-label>
-    <mat-radio-group class="optional-radio-group" [(ngModel)]="optionalComponents[key]">
-      <mat-radio-button class="optional-radio-button" [value]="true">yes</mat-radio-button>
-      <mat-radio-button class="optional-radio-button" [value]="false">no</mat-radio-button>
-    </mat-radio-group>
-  </div>
-  <button mat-raised-button color="primary" (click)="analyse()" [disabled]="analyseButtonDisabled()">Analyze</button>
-  <div>
-    {{results | json}}
-    {{states | json}}
-  </div>
+  <mat-card id="form-card">
+    <mat-card-header>
+      <mat-card-title>Engine Configuration</mat-card-title>
+      <mat-card-subtitle>Analysis Form</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>engine type</mat-label>
+        <mat-select [(ngModel)]="selectedEngine">
+          <mat-option *ngFor="let engine of engineTypes" [value]="engine">
+            {{engine}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngFor="let key of optionalComponentsKeys">
+        <mat-label>{{getPropertyTranslation(key)}}</mat-label>
+        <mat-radio-group class="optional-radio-group" [(ngModel)]="optionalComponents[key]">
+          <mat-radio-button class="optional-radio-button" [value]="true">yes</mat-radio-button>
+          <mat-radio-button class="optional-radio-button" [value]="false">no</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="analyse()" [disabled]="analyseButtonDisabled()">Analyze</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card id="state-card">
+    <mat-card-header>
+      <mat-card-title>Analysis Service State</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ol>
+        <li>Analysis Service: {{states.state1}}</li>
+        <li>Analysis Service: {{states.state2}}</li>
+      </ol>
+    </mat-card-content>
+  </mat-card>
+  <mat-card id="result-card">
+    <mat-card-header>
+      <mat-card-title>Analysis Results</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="!noResults()">
+        <span [ngSwitch]="results['Analysis1']">
+          <b>1st Analysis: </b>
+          <span *ngSwitchCase="true" class="success">Success</span>
+          <span *ngSwitchCase="false" class="failure">Failure</span>
+        </span>
+        <hr>
+        <span [ngSwitch]="results['Analysis2']">
+          <b>2nd Analysis: </b>
+          <span *ngSwitchCase="true" class="success">Success</span>
+          <span *ngSwitchCase="false" class="failure">Failure</span>
+        </span>
+      </div>
+      <mat-spinner *ngIf="analysisRunning"></mat-spinner>
+    </mat-card-content>
+  </mat-card>
 </div>
-
