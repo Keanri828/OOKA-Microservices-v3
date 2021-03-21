@@ -8,7 +8,7 @@ import {ConfigDto} from '../interfaces/config-dto';
 })
 export class ConnectionService {
 
-  private url = 'http://localhost:8080';
+  private url = 'http://localhost:18080';
   @Output() public dataChanged: EventEmitter<any> = new EventEmitter();
   @Output() public retryEvent: EventEmitter<ConfigDto> = new EventEmitter<ConfigDto>();
 
